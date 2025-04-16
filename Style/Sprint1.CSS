@@ -1,0 +1,65 @@
+
+p{
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(48, 47, 47);
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+
+    background-color: rgba(255, 0, 0, 0.714);
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+    
+
+
+}
+
+#logo {
+    font-size: 32px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.main {
+    flex: 1 1 0;
+
+}
+
+footer {
+ 
+    background-color: rgba(255, 0, 0, 0.714);
+}
+
+
+

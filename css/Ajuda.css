@@ -1,0 +1,28 @@
+
+html{
+    background-color: rgb(58, 58, 58); 
+   color: white;
+}
+
+header h1 {
+    background-color: red;
+height: 40px;
+width: 220px;
+}
+
+table {
+    background-color: red;
+}
+
+#loja{
+    background-color: rgb(172, 172, 172);
+}
+
+p{
+    color: white;
+}
+
+footer{ 
+    
+background-color: red;
+}

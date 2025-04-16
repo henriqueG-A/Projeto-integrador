@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="shortcut icon" href="img/claquete.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/Ajuda.css">
+</head>
+
+<body>
+    <header>
+        <center>
+            <h1>Cadastro ReelBox</h1>
+        </center>
+    </header>
+    <br>
+    <hr>
+    <br>
+    <main>
+        <section>
+            <center>
+                <h3>Pagamento</h3>
+            </center>
+            <p>Preencha os campos abaixo para completar seu cadastro e aproveitar os produtos exclusivos das caixas
+                ReelBox!<br>Se atente em preencher os dados com informações corretas e atualizadas.</p>
+            <form method="post" action="#">
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+                    <label>Nome</label>
+                    <input type="text" name="nome" placeholder="digite seu nome" required>
+                    <label>Data de Nascimento</label>
+                    <input type="date" name="data_nascimento" required>
+                    <label>Telefone</label>
+                    <input type="tel" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                    <label>CPF</label>
+                    <input type="text" name="CPF" placeholder="favor inserir CPF" required>
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="digite seu email" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <label>Endereço:</label>
+                    <input type="text" name="endereço" placeholder="insira seu endereço" required>
+                    <label>Cidade:</label>
+                    <input type="text" name="cidade" placeholder="digite sua cidade" required>
+                    <label>Estado:<select name="Cartões" required>
+                            <option value="">Selecionar</option>
+                            <option value="Crédito">São Paulo(SP)</option>
+                            <option value="Débito">Rio de Janeiro(RJ)</option>
+                            <option value="Débito">Espírito Santo(ES)</option>
+                            <option value="Débito">Minas Gerais(MG)</option>
+                        </select></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Credenciais</legend>
+                    <label>Cartão de <select name="Cartões" required>
+                            <option value="">Selecionar</option>
+                            <option value="Crédito">Crédito</option>
+                            <option value="Débito">Débito</option>
+                        </select></label>
+                    <input type="text" name="número_cartao" placeholder="favor informar o número do cartão" required>
+                    <label>Senha</label>
+                    <input type="text" name="número_cartao" placeholder="favor informar a senha do cartão" required>
+                    <label>Data de vencimento do cartão</label>
+                    <input type="date" name="data_vencimento" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Termos de Contrato</legend>
+                    <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae leo eget lorem sagittis
+                        sodales ac eu velit. Etiam mollis magna vel porta dictum. Phasellus ornare dictum magna, ut
+                        rhoncus nisi fermentum at. Aenean et congue sem. In metus lacus, malesuada non tortor in, dictum
+                        ultricies risus. In maximus, turpis quis pretium congue, lacus justo sodales dui, mattis egestas
+                        nunc ipsum ut arcu. Sed sollicitudin, metus eget vestibulum fringilla, nulla lorem ullamcorper
+                        urna, a elementum arcu lectus id nulla. Vivamus iaculis elit eu bibendum sagittis.</label>
+                </fieldset>
+                <input type="checkbox" id="checkbox-sim" name="concordo" value="Sim, aceito os termos" />
+                <label for="checkbox-sim">Sim, aceito os termos</label>
+                <input type="checkbox" id="checkbox-não" name="discordo" value="Não, recuso os termos" />
+                <label for="checkbox-não">Não, recuso os termos</label>
+                <br>
+                <center><button type="submit">Confirmar o cadastro</button></center>
+            </form>
+        </section>
+    </main>
+    <hr>
+    <center>
+        <a href="Sprint1.HTML"><button>Voltar</button></a>
+    </center>
+    <hr>
+    <br><br><br><br>
+<footer>
+    <div id="foooter_contats">
+        <h4>logo</h4>
+        <br>
+        <div id="footer_social_midia">
+            <a href="">instagram</a>
+            <i class="fa-brands fa-square-instagram"></i>
+        </div>
+        <p>© RealBox </p>
+    </div>
+   
+</footer>
+</body>
+
+</html>
