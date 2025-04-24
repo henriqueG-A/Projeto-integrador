@@ -2,33 +2,24 @@
     padding: 0%;
     margin: 0%;
     text-decoration: none;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: rgb(48, 47, 47);
-   color: white;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     
 }
 
-.header {
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(48, 47, 47);
+   color: white;
+}
 
+.header {
     background-color: rgb(88, 151, 240);
-    position: fixed;
-    top: 0%;
-    left: 0;
     width: 100%;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
- opacity: 80%;
-
+ opacity: 100%;
 }
 
 #logo {
@@ -36,29 +27,44 @@ body {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 700;
+    padding: 40px 20px 20px 20px;
+    float: left;
 }
+
+.clear{
+    clear: both;
+}
+
 
 .navbar a {
-    position: relative;
-    font-size: 18px;
+ font-size: 18px;
     color: rgb(255, 255, 255);
-    font-weight: 500;
     text-decoration: none;
-    margin-left: 40px;
-  
+    padding:  40px 20px 20px 20px;
+  float: right;
 }
 
 
-.navbar a :hover {
-  text-decoration: line;
+.img1, .img2, .img3{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 60%;
+
+}
+
+.img1{
+    background-image: url(/img/brasilredentor.png);
+}
+
+.conteudo{
+
+    background-color: black;
 }
 
 
 
-.main {
-    flex: 1 1 0;
-
-}
 
 footer {
  
