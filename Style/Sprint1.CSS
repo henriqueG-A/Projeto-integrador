@@ -9,12 +9,12 @@ body {
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    background-color: rgb(48, 47, 47);
+    background-color: #1F1F1F;
    color: white;
 }
 
 .header {
-    background-color: rgb(88, 151, 240);
+    background-color: #07265D;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -22,28 +22,72 @@ body {
  opacity: 100%;
 }
 
+
+.text1{
+    color: #ffffff;
+    font-size: 42px;
+
+}
+.text2{
+    color: #00C6E5;
+font-size: 42px;
+}
 #logo {
-    font-size: 32px;
+    font-size: 0px;
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 700;
-    padding: 40px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     float: left;
+    display: flex;
 }
 
 .clear{
     clear: both;
 }
 
+.navbar {
+    padding-top: 10px;
+    width: 100%; /* Garante que o container ocupe toda a largura */
+}
+
+.navbar::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
 
 .navbar a {
  font-size: 18px;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    padding:  40px 20px 20px 20px;
-  float: right;
+    padding: 10px 15px;
+    float: left;
 }
 
+.navbar a:hover {
+    font-size: 21px;
+}
+
+
+.nav2{
+    display: flex;
+    justify-content: flex-end; /* Alinha os links à direita */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.nav2 a {
+    font-size: 18px;
+    color: rgb(255, 255, 255); /* Define a cor branca */
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 10px 15px; /* Adiciona espaçamento interno */
+}
+
+.nav2 a:hover {
+    font-size: 21px;
+}
 
 .img1, .img2, .img3{
     height: 100%;
@@ -51,11 +95,17 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 60%;
-
+opacity: 0.7;
 }
 
 .img1{
-    background-image: url(/img/brasilredentor.png);
+    background-image: url(img/Free\ Vector\ _\ Realistic\ horizontal\ cinema\ movie\ time\ poster\ with\ 3d\ glasses\ snacks\ tickets\ clapper\ reel\ on\ blue\ background\ with\ bokeh\ vector\ illustration.jfif);
+    height: 750px; /* Altura fixa */
+    width: 100%; /* Largura total */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 }
 
 .conteudo{
@@ -68,7 +118,7 @@ body {
 
 footer {
  
-    background-color: rgb(88, 151, 240);
+    background-color: #07265D;
 }
 
 
