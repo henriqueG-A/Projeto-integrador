@@ -29,7 +29,7 @@ body {
 
 }
 .text2{
-    color: #00C6E5;
+    color: #0076BE;
 font-size: 42px;
 }
 #logo {
@@ -48,7 +48,7 @@ font-size: 42px;
 
 .navbar {
     padding-top: 10px;
-    width: 100%; /* Garante que o container ocupe toda a largura */
+    width: 100%;
 }
 
 .navbar::after {
@@ -106,20 +106,73 @@ opacity: 0.7;
     background-repeat: no-repeat;
     background-size: cover;
 }
-}
+
 
 .conteudo{
-
-    background-color: black;
+    height: 300px;
+    background-color:  #1F1F1F;
 }
 
+main .s1_l{
+    float: left;
+    width: 40%;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 1em;
+    margin-left: 50px;
+    line-height: 700px;
+}
 
+main .s1_r{
+    float: right;
+    width: 50%;
+    background-color: white;
+    margin-right: 50px;
 
+}
+
+.img2{
+    background-image: url(img/Captura\ de\ tela\ 2025-05-08\ 103440.png);
+    
+}
+.footerd{
+height: 580px;
+    background-color: #1F1F1F;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 60%;
+opacity: 0.7;
+}
 
 footer {
- 
+    margin-top: 100px;
+ padding:  50px;
     background-color: #07265D;
 }
+
+footer .foot_top{
+    text-align: center;
+    font-weight: 700;
+}
+
+footer .tx_cinz{
+    color: rgb(162, 161, 161);
+    text-transform: uppercase;;
+}
+footer .tx_bra{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+footer .foot_top img{
+    margin: 30px 0px;;
+}
+
+
+
 
 
 
