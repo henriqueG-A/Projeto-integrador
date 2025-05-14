@@ -128,12 +128,14 @@ main .s1_l{
     text-align: center;
     letter-spacing: 1em;
     margin-left: 50px;
-    line-height: 700px;
+   padding-top: 350px;
+   padding-bottom: 350px;
+    cursor: pointer;
 }
 
 .s1_l:hover {
     font-size: 55px;
-  
+  cursor: pointer;
 }
 
 main .s1_r{
@@ -195,6 +197,23 @@ main .reco1, .reco2, .reco3{
     background-image: url(img/Captura\ de\ tela\ 2025-05-08\ 103440.png);
     
 }
+
+.bblog{
+     text-align: center;
+    margin: 200px auto 0 auto; ;
+    color: #7ec3ee;
+    background-color: #07265D;
+    width: 25%;
+    padding: 10px;
+    border-radius: 30px;
+}
+.bblog:hover {
+    background-color: #0076BE;
+    color: white;
+    cursor: pointer;
+}
+
+
 .footerd{
 height: 580px;
     background-color: #1F1F1F;
