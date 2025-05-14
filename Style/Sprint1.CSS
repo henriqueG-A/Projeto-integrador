@@ -113,7 +113,13 @@ opacity: 0.7;
     background-color:  #1F1F1F;
 }
 
+a {
+  color: inherit; /* Pega a cor do texto do elemento pai */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
 main .s1_l{
+    color: #0076BE;
     float: left;
     width: 40%;
     text-transform: uppercase;
@@ -125,14 +131,66 @@ main .s1_l{
     line-height: 700px;
 }
 
+.s1_l:hover {
+    font-size: 55px;
+  
+}
+
 main .s1_r{
     float: right;
     width: 50%;
     background-color: white;
     margin-right: 50px;
-
+height: 700px;
 }
 
+main .s1_c {
+    margin: 250px 570px 0 570px; /* topo, auto, baixo, auto */
+    color: #0076BE;
+    width: 300px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+     letter-spacing: 0.1em;
+    text-align: center;
+}
+
+main .s1_ctxt {
+   margin-top: 40px;
+   color: white;
+    margin-left: 95px;
+    font-size: 20px;
+    width: 25%;
+    float: left;
+}
+
+
+ .s1_c:hover {
+    font-size: 55px;
+    background-color: #07265D;
+    width: 450px;
+}
+main .reco1, .reco2, .reco3{
+    margin-top: 100px;
+    background-color: white;
+    margin-left: 95px;
+    height: 550px;
+    width: 25%;
+    float: left;
+ background-size: 100%;
+}
+
+.reco1{
+    background-image: url(img/superman\ 200x296.png);
+     
+}
+
+.reco2{
+    background-image: url(img/the_fantastic_four.jpg);
+}
+
+.reco3{
+    background-image: url(img/Five_Nights_at_Freddys_2.jpg);
+}
 .img2{
     background-image: url(img/Captura\ de\ tela\ 2025-05-08\ 103440.png);
     
