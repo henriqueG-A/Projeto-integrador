@@ -1,72 +1,202 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajuda</title>
-    <link rel="shortcut icon" href="img/claquete.ico" type="image/x-icon">
- 
+     <link rel="shortcut icon" type="image/png" href="img/image-_4_.ico">
+    <title>Reelbox - Ajuda</title>
 
+    <link rel="stylesheet" href="Style/Sprint1.CSS">
+    
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+        }
 
-bady{
-    padding: 0%;
-    margin: 0%;
-    background-color: rgb(58, 58, 58); 
-    color: white; 
-}
+        header {
+            background-color: #062860;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+        }
 
-header h1 {
-    background-color: rgb(88, 151, 240);
-height: 40px;
-width: 220px;
-}
+        header .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-footer{ 
- 
- background-color:  rgb(88, 151, 240);
- }
+        header .logo .circle {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
 
+        header .logo span:last-child {
+            color: #00a0e0;
+        }
 
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #2cace2;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            justify-items: center;
+            max-width: 1000px;
+            margin: 0 auto 60px;
+        }
+
+        .card {
+            background-color: #ccc;
+            width: 250px;
+            height: 150px;
+            border-radius: 6px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .circle {
+            width: 60px;
+            height: 60px;
+            background-color: #0b2d62;
+            border-radius: 50%;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #0096c7;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 30px 20px;
+            font-size: 14px;
+        }
+
+        footer div {
+            max-width: 200px;
+        }
+
+        footer h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .color1{
+            color: black;
+        }
+        .color2{
+            color: rgb(255, 255, 255);
+        }
     </style>
 </head>
+
 <body>
-<div>
-
     <header>
-<br>
-        <center>
-            <H1 id="NOME">AJUDA</H1>
-        </center>
-
+        <div class="logo">
+            <div class="circle"></div>
+            <span class="color2">Reel</span><span>box</span>
+        </div>
     </header>
 
-    <main>
-<center>
-<br><br><br><br>
-
-</center>
-    </main>
-    <br><hr>
-    <center>
-        <a href="Sprint1.HTML"><button>Voltar</button></a>
-    </center>
-    
-    <hr>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <footer>
-        <div id="foooter_contats">
-            <h4>logo</h4>
-            <br>
-            <div id="footer_social_midia">
-                <a href="">instagram</a>
-                <i class="fa-brands fa-square-instagram"></i>
+    <div class="content">
+        <h2>AJUDA</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="circle">
+                    <img src="img/homem1.jfif" alt="Imagem 1">
+                </div>
+                <br>
+                <br>
+                <p class="color1">José - Responsável pelas questões de entrega.</p>
             </div>
-            <p>© RealBox </p>
+            <div class="card">
+                <div class="circle">
+                    <img src="img/mulher1.jfif" alt="Imagem 2">
+                </div>
+                <br>
+                <br>
+                <p class="color1">Juliana - Responsável pela qualidade dos produtos nas caixas.</p>
+            </div>
+            <div class="card">
+                <div class="circle">
+                    <img src="img/mulher2.jfif" alt="Imagem 3">
+                </div>
+                <br>
+                <br>
+                <p class="color1">Lúcia - Responsável pelas questões de pagamento.</p>
+            </div>
+            <div class="card">
+                <div class="circle">
+                    <img src="img/homem2.jfif" alt="Imagem 4">
+                </div>
+                <br>
+                <br>
+                <p class="color1">Renan - Atendente de perguntas gerais.</p>
+            </div>
+            <div class="card">
+                <div class="circle">
+                    <img src="img/mulher3.jfif" alt="Imagem 5">
+                </div>
+                <br>
+                <br>
+                <p class="color1">Paula - Atendente de perguntas gerais.</p>
+            </div>
+            <div class="card">
+                <div class="circle">
+                    <img src="img/homem3.jfif" alt="Imagem 6">
+                </div>
+                <br>
+                <br>
+                <p class="color1">Lucas - Atendente de perguntas gerais.</p>
+            </div>
         </div>
-       
+    </div>
+
+       <footer>
+        <div>
+            <h1>CONTATO</h1>
+            <p> Gmail: reelbox_conporation@gmail.com</p>
+            <br>
+            <p>Telefone: 4002-8922</p>
+        </div>
+        <div>
+           <img src="img/image (5).png" alt="">
+        </div>
     </footer>
-</div>
+
+    <footer class="footerd">
+      <div class="img2"></div>
+    </footer>
 </body>
+
 </html>

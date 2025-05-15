@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="shortcut icon" type="image/png" href="img/image-_4_.ico">
-    <title>Reelbox - Pagamento</title>
+    <title>Reelbox - Login</title>
     <style>
         body {
-            margin: 0;
+            padding: 0%;
+            margin: 0%;
             font-family: Arial, sans-serif;
             background-color: #1e1e1e;
             color: #00a0e0;
@@ -31,7 +31,7 @@
         header .logo .circle {
             width: 20px;
             height: 20px;
-            background: #ffffff;
+            background: white;
             border-radius: 50%;
             margin-right: 10px;
         }
@@ -48,7 +48,6 @@
         h1 {
             font-size: 36px;
             margin-bottom: 40px;
-            color: #00a0e0;
         }
 
         form {
@@ -58,36 +57,24 @@
 
         label {
             display: block;
+            color: #00a0e0;
             margin-bottom: 5px;
             font-size: 14px;
-            color: #00a0e0;
         }
 
-        input[type="text"],
-        input[type="number"] {
-            width: 100%;
-            max-width: 500px;
+        input[type="email"],
+        input[type="password"] {
+            width: 300px;
             padding: 10px;
             margin-bottom: 20px;
             border: none;
             background: #ccc;
             font-size: 16px;
-            color: black;
-        }
-
-        .row {
-            display: flex;
-            gap: 20px;
-        }
-
-        .row input {
-            flex: 1;
         }
 
         .button-row {
             display: flex;
-            gap: 20px;
-            margin-top: 20px;
+            justify-content: space-between;
         }
 
         button {
@@ -97,12 +84,12 @@
             cursor: pointer;
         }
 
-        .btn-finalizar {
+        .btn-login {
             background-color: #0077b6;
             color: white;
         }
 
-        .btn-outros {
+        .btn-register {
             background-color: #ccc;
             color: black;
         }
@@ -135,40 +122,40 @@
     <header>
         <div class="logo">
             <div class="circle"></div>
-            <span style="color:white;">Reel</span><span>box</span>
+            <span class="color">Reel</span><span>box</span>
         </div>
     </header>
 
     <main>
-        <h1>PAGAMENTO</h1>
+        <h1>LOGIN</h1>
         <form>
-            <label for="cartao">NUMERO DO CARTÃO</label>
-            <input type="text" id="cartao" name="cartao" maxlength="19" placeholder="•••• •••• •••• ••••">
+            <label for="email">E-MAIL</label>
+            <input type="email" id="email" name="email" required placeholder="exemplo@hotmail.com">
 
-            <div class="row">
-                <input type="text" name="validade" placeholder="MM/AA">
-                <input type="text" name="cvv" placeholder="CVV">
-            </div>
-
-            <input type="text" name="nome" placeholder="NOME IMPRESSO NO CARTÃO">
+            <label for="senha">SENHA</label>
+            <input type="password" id="senha" name="senha" required placeholder="Senha Necessária">
 
             <div class="button-row">
-                <button type="submit" class="btn-finalizar">FINALIZAR</button>
-                <button type="button" class="btn-outros" onclick="window.location.href='login.html'">VOLTAR</button>
+                <button type="submit" class="btn-login">ENTRAR</button>
+             <button type="button" class="btn-register" onclick="window.location.href='cadastro.html'">CADASTRAR-SE</button>
             </div>
         </form>
     </main>
 
     <footer>
         <div>
-            <h1 class="color">CONTATO</h1>
-            <p>reelbox_conporation@gmail.com</p>
-            <p>4002-8922</p>
+            <h1>CONTATO</h1>
+            <p> Gmail: reelbox_conporation@gmail.com</p>
+            <br>
+            <p>Telefone: 4002-8922</p>
         </div>
         <div>
-            <h1 class="color">SOBRE NÓS</h1>
-            <p>sites apresentado cada um</p>
+           <img src="img/image (5).png" alt="">
         </div>
+    </footer>
+
+    <footer class="footerd">
+      <div class="img2"></div>
     </footer>
 </body>
 
