@@ -9,56 +9,6 @@
     <link rel="stylesheet" href="Style/Sprint1.CSS">
 
     <style>
-        @media (max-width: 900px) {
-            .cards-container {
-                grid-template-columns: 1fr;
-                padding: 0 10px 40px;
-            }
-
-            .card img {
-                height: 200px;
-            }
-
-            .title {
-                font-size: 28px;
-            }
-
-            footer {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 20px;
-            }
-
-            footer div {
-                max-width: none;
-            }
-        }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                padding: 10px 10px;
-            }
-
-            .title {
-                font-size: 22px;
-            }
-
-            .card img {
-                height: 140px;
-            }
-
-            main {
-                padding: 30px 5px;
-            }
-
-            footer {
-                font-size: 12px;
-                padding: 20px 5px;
-            }
-        }
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -110,7 +60,7 @@
 
         .cards-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 80px;
             padding: 0 40px 60px;
         }
@@ -133,12 +83,6 @@
             height: 600px;
             object-fit: cover;
             display: block;
-        }
-
-        .card h2 {
-            color: #00aaff;
-            font-size: 18px;
-            padding: 10px 15px 0;
         }
 
         .card p {
@@ -168,9 +112,48 @@
             font-size: 20px;
         }
 
-
         .color {
             color: white;
+        }
+
+        /* Responsividade */
+        @media (max-width: 1200px) {
+            .cards-container {
+                gap: 40px;
+                padding: 0 20px 40px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .title {
+                font-size: 28px;
+            }
+            footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+            footer div {
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                padding: 10px 10px;
+            }
+            .title {
+                font-size: 22px;
+            }
+            main {
+                padding: 30px 5px;
+            }
+            footer {
+                font-size: 12px;
+                padding: 20px 5px;
+            }
         }
     </style>
 </head>
@@ -190,41 +173,40 @@
             <article class="card">
                 <img src="img/big-poster-filme-matrix-lo03-tamanho-90x60-cm-geek.jpg" />
                 <p>Nota Imdb: 8,7</p>
-
             </article>
-
             <article class="card">
-                <img src="img/MV5BZGYzMGY0ZjctNDY3ZC00MDEzLTgzN2YtYWM1OTQyOTI1NDMxXkEyXkFqcGc@._V1_.jpg"
-                    alt="Cartaz do filme 2" />
+                <img src="img/MV5BZGYzMGY0ZjctNDY3ZC00MDEzLTgzN2YtYWM1OTQyOTI1NDMxXkEyXkFqcGc@._V1_.jpg" alt="Cartaz do filme 2" />
                 <p>Nota Imdb: 8,7 </p>
-
             </article>
-
             <article class="card">
                 <img src="img/god.webp" alt="Cartaz do filme 3" />
                 <p>Nota Imdb: 9,2 </p>
-
             </article>
-
             <article class="card">
                 <img src="img/big-poster-filme-batman-2022-90x60-cm-lo002-poster-batman.webp" />
                 <p>Nota Imdb: 7,8 </p>
-
             </article>
-
             <article class="card">
                 <img src="img/openhaimer.webp" />
                 <p>Nota Imdb: 8,3 </p>
-
             </article>
-
             <article class="card">
-                <img src="img/5781885.webp" alt="Cartaz do filme 3" />
+                <img src="img/5781885.webp" alt="Cartaz do filme 6" />
                 <p>Nota Imdb: 7,3 </p>
-
+            </article>
+            <article class="card">
+                <img src="img/3d44122e837e6184afdb7e7c3e1da3df.webp" alt="Cartaz do filme 7" />
+                <p>Nota Imdb: 7,7 </p>
+            </article>
+            <article class="card">
+                <img src="img/51TgWDAeqqL.jpg" alt="Cartaz do filme 8" />
+                <p>Nota Imdb: 9,2 </p>
+            </article>
+            <article class="card">
+                <img src="img/ae760746629636d521b8e1aa5778935c.webp" alt="Cartaz do filme 9" />
+                <p>Nota Imdb: 7,9 </p>
             </article>
         </section>
-
     </main>
 
     <footer>
@@ -242,6 +224,3 @@
     <footer class="footerd">
         <div class="img2"></div>
     </footer>
-</body>
-
-</html>
