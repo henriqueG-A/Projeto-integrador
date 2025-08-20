@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="shortcut icon" type="image/png" href="img/image-_4_.ico">
+    <link rel="shortcut icon" type="image/png" href="img/image-_4_.ico">
     <title>ReelBox Store</title>
     <link rel="shortcut icon" href="img/" type="image/x-icon">
 
@@ -13,73 +13,123 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="Style/Sprint1.CSS">
-    
+
 
     <style>
+        @media (max-width: 900px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+                padding: 0 10px 40px;
+            }
 
-h1{
-    color: #0076BE;
-    margin: 120px 400px 0px 880px;
-    font-size: 50px;
-}
-a{
-    font-size: 25px;
-   margin: 0px 20px 0px 20px;
-     width: 20%;
-     float: right;
-     color: #0076BE;
-}
-        .clear{
+            .card img {
+                height: 200px;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+
+            footer div {
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                padding: 10px 10px;
+            }
+
+            .title {
+                font-size: 22px;
+            }
+
+            .card img {
+                height: 140px;
+            }
+
+            main {
+                padding: 30px 5px;
+            }
+
+            footer {
+                font-size: 12px;
+                padding: 20px 5px;
+            }
+        }
+
+
+        h1 {
+            color: #0076BE;
+            margin: 120px 400px 0px 880px;
+            font-size: 50px;
+        }
+
+        a {
+            font-size: 25px;
+            margin: 0px 20px 0px 20px;
+            width: 20%;
+            float: right;
+            color: #0076BE;
+        }
+
+        .clear {
             clear: both;
         }
 
-    main .filtros{
-       float: left;
-       height: 1800px;
-       width: 30%;
-    }
+        main .filtros {
+            float: left;
+            height: 1800px;
+            width: 30%;
+        }
 
 
-    H5{
-        margin: 50px 0px 20px 0px;
-        margin-left: 50px;
-        color: #0076BE;
-    }
+        H5 {
+            margin: 50px 0px 20px 0px;
+            margin-left: 50px;
+            color: #0076BE;
+        }
 
-    
-    H6{
-        margin-top: 10px;
-        margin-left: 50px;
-        color: #0076BE;
-        padding: 20px 0px 10px 3px;
-         margin-left: 55px;
-        border: 2PX solid #0076BE;
-    }
 
-    h2, h3, h4{
-        color: #0076BE;
-        padding: 5px;
-        margin-left: 55px;
-        border: 2PX solid #0076BE;
-        
-    }
+        H6 {
+            margin-top: 10px;
+            margin-left: 50px;
+            color: #0076BE;
+            padding: 20px 0px 10px 3px;
+            margin-left: 55px;
+            border: 2PX solid #0076BE;
+        }
 
-    h2{
-        margin-top: 10px;
-    }
+        h2,
+        h3,
+        h4 {
+            color: #0076BE;
+            padding: 5px;
+            margin-left: 55px;
+            border: 2PX solid #0076BE;
 
-    .prod{
-        margin: 50px 20px 40px 20px;
-        width: 20%;
-        height: 400px;
-        background-color: white;
-        float: right;
-       
-    }
+        }
 
-    
-  
-        
+        h2 {
+            margin-top: 10px;
+        }
+
+        .prod {
+            margin: 50px 20px 40px 20px;
+            width: 20%;
+            height: 400px;
+            background-color: white;
+            float: right;
+
+        }
     </style>
 </head>
 
@@ -92,7 +142,7 @@ a{
         <div class="clear"></div>
 
         <nav class="navbar">
-          
+
     </header>
 
     <div class="clear"></div>
@@ -103,66 +153,66 @@ a{
 
         <div class=" filtros">
 
-             
-        <h5>Filtros</h5>
 
-        <h3>Mais vendidos </h3>
-        <H4>Em destaque</H4>
-        <H4>Ordem alfabetica</H4>
-        <H4>Data de lançamento</H4>
+            <h5>Filtros</h5>
 
-   
-        <h2>Preços</h2>
-
-        <h3>Ordem cescente</h3>
-        <H4>Ordem decrescente</H4>
-        <H4>Promoções</H4>
-        <H4>Abaixo de R$100</H4>
-        <H4>Acima de R$100</H4>
+            <h3>Mais vendidos </h3>
+            <H4>Em destaque</H4>
+            <H4>Ordem alfabetica</H4>
+            <H4>Data de lançamento</H4>
 
 
-   
-           <h2>Produtos dos pacotes</h2>
+            <h2>Preços</h2>
 
-        <h3>Mais populares</h3>
-        <H4>Menor valor</H4>
+            <h3>Ordem cescente</h3>
+            <H4>Ordem decrescente</H4>
+            <H4>Promoções</H4>
+            <H4>Abaixo de R$100</H4>
+            <H4>Acima de R$100</H4>
+
+
+
+            <h2>Produtos dos pacotes</h2>
+
+            <h3>Mais populares</h3>
+            <H4>Menor valor</H4>
         </div>
-        
 
-       
-            
+
+
+
 
         </div>
 
         <h1>Produtos</h1>
 
-        
+
 
         <div class="prod"> </div>
-        
-        <div class="prod"> </div>
-        
+
         <div class="prod"> </div>
 
-      <a href="#">produtos</a><a href="#">produtos</a><a href="#">produtos</a>
-     
-          <div class="prod"> </div>
+        <div class="prod"> </div>
+
+        <a href="#">produtos</a><a href="#">produtos</a><a href="#">produtos</a>
+
+        <div class="prod"> </div>
         <div class="prod"> </div>
         <div class="prod"> </div>
 
-       <a href="#">produtos</a><a href="#">produtos</a><a href="#">produtos</a>
+        <a href="#">produtos</a><a href="#">produtos</a><a href="#">produtos</a>
 
-          <div class="prod"> </div>
         <div class="prod"> </div>
         <div class="prod"> </div>
-   
+        <div class="prod"> </div>
+
         <a href="#">produtos</a><a href="#">produtos</a><a href="#">produtos</a>
 
     </main>
 
- <div class="clear"></div>
+    <div class="clear"></div>
 
-   <footer>
+    <footer>
         <div>
             <h1>CONTATO</h1>
             <p> Gmail: reelbox_conporation@gmail.com</p>
@@ -170,12 +220,12 @@ a{
             <p>Telefone: 4002-8922</p>
         </div>
         <div>
-           <img src="img/image (5).png" alt="">
+            <img src="img/image (5).png" alt="">
         </div>
     </footer>
 
     <footer class="footerd">
-      <div class="img2"></div>
+        <div class="img2"></div>
     </footer>
 
 </body>
