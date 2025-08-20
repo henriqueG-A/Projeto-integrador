@@ -19,6 +19,7 @@ body {
     background-color: #07265D;
     width: 100%;
     display: flex;
+    
     justify-content: space-between;
     align-items: center;
  opacity: 100%;
@@ -27,12 +28,12 @@ body {
 
 .text1{
     color: #ffffff;
-    font-size: 42px;
+    font-size: 32px;
 
 }
 .text2{
     color: #0076BE;
-font-size: 42px;
+font-size: 32px;
 }
 #logo {
     font-size: 0px;
@@ -51,6 +52,7 @@ font-size: 42px;
 .navbar {
     padding-top: 10px;
     width: 100%;
+    margin-left: 20px;
 }
 
 .navbar::after {
@@ -62,7 +64,7 @@ font-size: 42px;
 
 
 .navbar a {
- font-size: 18px;
+ font-size: 16px;
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 10px 15px;
@@ -70,6 +72,8 @@ font-size: 42px;
 }
 
 .navbar a:hover {
+     transition: all 0.3s ease; /* Adiciona uma transição suave */
+    color: #5d5c5c;
     font-size: 21px;
 }
 
@@ -88,6 +92,8 @@ font-size: 42px;
 }
 
 .nav2 a:hover {
+    transition: all 0.3s ease; /* Adiciona uma transição suave */
+    color: #5d5c5c;
     font-size: 21px;
 }
 
