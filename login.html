@@ -3,11 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
-     <link rel="shortcut icon" type="image/png" href="img/image-_4_.ico">
+    <link rel="shortcut icon" type="image/png" href="img/image-_4_.ico">
     <title>Reelbox - Login</title>
     <link rel="stylesheet" href="Style/Sprint1.CSS">
-    
+
     <style>
+        @media (max-width: 900px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+                padding: 0 10px 40px;
+            }
+
+            .card img {
+                height: 200px;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+
+            footer div {
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                padding: 10px 10px;
+            }
+
+            .title {
+                font-size: 22px;
+            }
+
+            .card img {
+                height: 140px;
+            }
+
+            main {
+                padding: 30px 5px;
+            }
+
+            footer {
+                font-size: 12px;
+                padding: 20px 5px;
+            }
+        }
+
         body {
             padding: 0%;
             margin: 0%;
@@ -139,7 +189,8 @@
 
             <div class="button-row">
                 <button type="submit" class="btn-login">ENTRAR</button>
-             <button type="button" class="btn-register" onclick="window.location.href='cadastro.html'">CADASTRAR-SE</button>
+                <button type="button" class="btn-register"
+                    onclick="window.location.href='cadastro.html'">CADASTRAR-SE</button>
             </div>
         </form>
     </main>
@@ -152,12 +203,12 @@
             <p>Telefone: 4002-8922</p>
         </div>
         <div>
-           <img src="img/image (5).png" alt="">
+            <img src="img/image (5).png" alt="">
         </div>
     </footer>
 
     <footer class="footerd">
-      <div class="img2"></div>
+        <div class="img2"></div>
     </footer>
 </body>
 

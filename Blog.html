@@ -3,13 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
-     <link rel="shortcut icon" type="image/png" href="img/image-_4_.ico">
+    <link rel="shortcut icon" type="image/png" href="img/image-_4_.ico">
     <title>Reelbox - Blog</title>
 
     <link rel="stylesheet" href="Style/Sprint1.CSS">
-    
-    <style>
 
+    <style>
+        @media (max-width: 900px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+                padding: 0 10px 40px;
+            }
+
+            .card img {
+                height: 200px;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+
+            footer div {
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                padding: 10px 10px;
+            }
+
+            .title {
+                font-size: 22px;
+            }
+
+            .card img {
+                height: 140px;
+            }
+
+            main {
+                padding: 30px 5px;
+            }
+
+            footer {
+                font-size: 12px;
+                padding: 20px 5px;
+            }
+        }
 
         body {
             margin: 0;
@@ -151,12 +199,13 @@
             <article class="card">
                 <img src="img/superman.webp" alt="Cartaz do filme 4" />
                 <h2>SUPERMAN LEGACY</h2>
-                <p>Ouça em primeira mão quais são as expectativas do ator David Corenswet sobre a futura estréia do filme Superman Legacy!</p>
+                <p>Ouça em primeira mão quais são as expectativas do ator David Corenswet sobre a futura estréia do
+                    filme Superman Legacy!</p>
             </article>
         </section>
     </main>
 
- <footer>
+    <footer>
         <div>
             <h1>CONTATO</h1>
             <p> Gmail: reelbox_conporation@gmail.com</p>
@@ -164,12 +213,12 @@
             <p>Telefone: 4002-8922</p>
         </div>
         <div>
-           <img src="img/image (5).png" alt="">
+            <img src="img/image (5).png" alt="">
         </div>
     </footer>
 
     <footer class="footerd">
-      <div class="img2"></div>
+        <div class="img2"></div>
     </footer>
 </body>
 
