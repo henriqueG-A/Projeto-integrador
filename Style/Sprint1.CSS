@@ -22,7 +22,10 @@ body {
     position: fixed;
     justify-content: space-between;
     align-items: center;
- opacity: 90%;
+ opacity: 80%;
+ bacground-opacity: 0.8;
+    padding: 10px 20px;
+
 }
 
 
@@ -79,6 +82,8 @@ font-size: 32px;
 
 
 .nav2{
+width: 
+    100%;
     display: flex;
     justify-content: flex-end; /* Alinha os links à direita */
     align-items: center; /* Centraliza verticalmente */
@@ -107,12 +112,12 @@ font-size: 32px;
 }
 
 .img1{
-    background-image: url(img/Free\ Vector\ _\ Realistic\ horizontal\ cinema\ movie\ time\ poster\ with\ 3d\ glasses\ snacks\ tickets\ clapper\ reel\ on\ blue\ background\ with\ bokeh\ vector\ illustration.jfif);
+    background-image: url(img/REELBOX\ \(3\).png);
     height: 750px; /* Altura fixa */
     width: 100%; /* Largura total */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 1520px 730px; /* Ajusta a imagem para preencher o espaço */
 }
 
 
@@ -131,18 +136,17 @@ main .s1_l{
     float: left;
     width: 40%;
     text-transform: uppercase;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 50px;
+    font-family:  Arial Narrow Bold, sans-serif;
+    font-size: 20px;
     text-align: center;
-    letter-spacing: 1em;
     margin-left: 50px;
-   padding-top: 350px;
-   padding-bottom: 350px;
+   margin-top: 350px;
+   margin-bottom: 350px;
     cursor: pointer;
 }
 
 .s1_l:hover {
-    font-size: 55px;
+    font-size: 25px;
   cursor: pointer;
 }
 
@@ -236,7 +240,7 @@ main .reco1, .reco2, .reco3{
 }
 
 footer {
-    margin-top: 50px;
+    margin-top: 400px;
     background-color: #0076BE;
     color: white;
     display: flex;
