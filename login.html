@@ -188,7 +188,7 @@
             <input type="password" id="senha" name="senha" required placeholder="Senha Necessária">
 
             <div class="button-row">
-                <button type="submit" class="btn-login">ENTRAR</button>
+                <button type="submit" class="btn-login" onclick="validarLogin()">ENTRAR</button>
                 <button type="button" class="btn-register"
                     onclick="window.location.href='cadastro.html'">CADASTRAR-SE</button>
             </div>
@@ -210,6 +210,25 @@
     <footer class="footerd">
         <div class="img2"></div>
     </footer>
+
+    <script>
+        validarLogin = () => {
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+
+            if (email === 'a@a.com' && senha === '123456') {
+                alert('Login realizado com sucesso!');
+                window.location.href = 'index.html'; // Redireciona para a página inicial
+            } else {
+                alert('E-mail ou senha incorretos.');
+                return false;
+            }
+
+        }
+
+
+    </script>
 </body>
 
 </html>
