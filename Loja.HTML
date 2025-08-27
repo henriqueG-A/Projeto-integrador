@@ -14,58 +14,123 @@
 
     <link rel="stylesheet" href="Style/Sprint1.CSS">
 
-
     <style>
+        .filtros {
+            float: left;
+            width: 28%;
+            min-width: 240px;
+            max-width: 320px;
+            background: #2a2a2a;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 118, 190, 0.08);
+            padding: 32px 24px 24px 24px;
+            margin: 100px 0 40px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .filtros h5 {
+            color: #0076BE;
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            margin-left: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .filtros-section {
+            margin-bottom: 0;
+        }
+
+        .filtros-section-title {
+            color: #0076BE;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            margin-top: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .filtros-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filtro-btn {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: none;
+            background: #f3f8fc;
+            color: #0076BE;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 1px 2px rgba(0,118,190,0.04);
+            outline: none;
+        }
+
+        .filtro-btn:hover,
+        .filtro-btn.filtro-ativo {
+            background: #0076BE;
+            color: #fff !important;
+            box-shadow: 0 2px 8px rgba(0,118,190,0.10);
+        }
+
+        .filtro-btn i {
+            font-size: 1.1em;
+        }
+
+        /* Limpar filtros botão */
+        .limpar-btn {
+            background: #eee !important;
+            color: #0076BE !important;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border: 1px solid #0076BE;
+            justify-content: center;
+        }
+        .limpar-btn:hover {
+            background: #0076BE !important;
+            color: #fff !important;
+        }
+
         @media (max-width: 900px) {
-            .cards-container {
-                grid-template-columns: 1fr;
-                padding: 0 10px 40px;
-            }
-
-            .card img {
-                height: 200px;
-            }
-
-            .title {
-                font-size: 28px;
-            }
-
-            footer {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 20px;
-            }
-
-            footer div {
+            .filtros {
+                float: none;
+                width: 100%;
                 max-width: none;
+                margin: 100px 0 20px 0;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 18px;
+                padding: 18px 8px;
+            }
+            .filtros-section {
+                min-width: 180px;
+                flex: 1 1 180px;
             }
         }
 
         @media (max-width: 600px) {
-            header {
+            .filtros {
                 flex-direction: column;
-                padding: 10px 10px;
+                gap: 14px;
+                padding: 10px 2px;
+                margin-top: 100px;
             }
-
-            .title {
-                font-size: 22px;
-            }
-
-            .card img {
-                height: 140px;
-            }
-
-            main {
-                padding: 30px 5px;
-            }
-
-            footer {
-                font-size: 12px;
-                padding: 20px 5px;
+            .filtros-section {
+                min-width: unset;
             }
         }
-
 
         h1 {
             color: #0076BE;
@@ -85,129 +150,109 @@
             clear: both;
         }
 
-        main .filtros {
-            float: left;
-            height: 1800px;
-            width: 30%;
-        }
-
-
-        H5 {
-            margin: 50px 0px 20px 0px;
-            margin-left: 50px;
-            color: #0076BE;
-        }
-
-
-        H6 {
-            margin-top: 10px;
-            margin-left: 50px;
-            color: #0076BE;
-            padding: 20px 0px 10px 3px;
-            margin-left: 55px;
-            border: 2PX solid #0076BE;
-        }
-
-        h2,
-        h3,
-        h4 {
-            color: #0076BE;
-            padding: 5px;
-            margin-left: 55px;
-            border: 2PX solid #0076BE;
-
-        }
-
-        h2 {
-            margin-top: 10px;
-        }
+      
 
         .prod {
             margin: 50px 20px 40px 20px;
             width: 20%;
             height: 400px;
-            background-color: white;
-            float: right;
+            background-color: #093074;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            box-sizing: border-box;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            position: relative;
+        }
 
+        .prod-img {
+            width: 90%;
+            height: 200px;
+            object-fit: contain;
+            background: #f1f1f1;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .prod-nome {
+            font-weight: bold;
+            color: #0076BE;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .prod-preco {
+            color: #ffffff;
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .prod-promo {
+            color: #fff;
+            background: #ff4d4f;
+            font-size: 0.9rem;
+            padding: 2px 8px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 8px;
         }
     </style>
 </head>
 
 <body>
 
-
     <header class="header">
         <a href="curiosidade.HTML" id="logo"> <span class="text1">Reel</span> <span class="text2">Box</span> </a>
-
         <div class="clear"></div>
-
         <nav class="navbar">
-
     </header>
 
     <div class="clear"></div>
 
-
-
     <main>
-
-        <div class=" filtros">
-
-
-            <h5>Filtros</h5>
-
-            <h3>Mais vendidos </h3>
-            <H4>Em destaque</H4>
-            <H4>Ordem alfabetica</H4>
-            <H4>Data de lançamento</H4>
-
-
-            <h2>Preços</h2>
-
-            <h3>Ordem cescente</h3>
-            <H4>Ordem decrescente</H4>
-            <H4>Promoções</H4>
-            <H4>Abaixo de R$100</H4>
-            <H4>Acima de R$100</H4>
-
-
-
-            <h2>Produtos dos pacotes</h2>
-
-            <h3>Mais populares</h3>
-            <H4>Menor valor</H4>
-        </div>
-
-
-
-
-
+        <div class="filtros">
+            <div class="filtros-section">
+                <h5><i class="fa fa-filter"></i> Filtros</h5>
+                <button class="filtro-btn limpar-btn" onclick="limparFiltros(this)">
+                    <i class="fa fa-times-circle"></i> Limpar filtros
+                </button>
+                <div class="filtros-section-title"><i class="fa fa-sort"></i> Ordenar por</div>
+                <ul class="filtros-list">
+                    <li><button class="filtro-btn" onclick="filtrar('mais_vendidos', this)"><i class="fa fa-fire"></i> Mais vendidos</button></li>
+                    <li><button class="filtro-btn" onclick="filtrar('destaque', this)"><i class="fa fa-star"></i> Em destaque</button></li>
+                    <li><button class="filtro-btn" onclick="filtrar('alfabetica', this)"><i class="fa fa-font"></i> Ordem alfabética</button></li>
+                    <li><button class="filtro-btn" onclick="filtrar('lancamento', this)"><i class="fa fa-calendar"></i> Data de lançamento</button></li>
+                </ul>
+            </div>
+            <div class="filtros-section">
+                <div class="filtros-section-title"><i class="fa fa-tag"></i> Preços</div>
+                <ul class="filtros-list">
+                    <li><button class="filtro-btn" onclick="filtrar('preco_crescente', this)"><i class="fa fa-arrow-up"></i> Ordem crescente</button></li>
+                    <li><button class="filtro-btn" onclick="filtrar('preco_decrescente', this)"><i class="fa fa-arrow-down"></i> Ordem decrescente</button></li>
+                    <li><button class="filtro-btn" onclick="filtrar('promocao', this)"><i class="fa fa-percent"></i> Promoções</button></li>
+                    <li><button class="filtro-btn" onclick="filtrar('abaixo_100', this)"><i class="fa fa-money-bill-wave"></i> Abaixo de R$100</button></li>
+                    <li><button class="filtro-btn" onclick="filtrar('acima_100', this)"><i class="fa fa-money-bill-trend-up"></i> Acima de R$100</button></li>
+                </ul>
+            </div>
+            <div class="filtros-section">
+                <div class="filtros-section-title"><i class="fa fa-box"></i> Produtos dos pacotes</div>
+                <ul class="filtros-list">
+                    <li><button class="filtro-btn" onclick="filtrar('populares', this)"><i class="fa fa-thumbs-up"></i> Mais populares</button></li>
+                    <li><button class="filtro-btn" onclick="filtrar('menor_valor', this)"><i class="fa fa-coins"></i> Menor valor</button></li>
+                </ul>
+            </div>
         </div>
 
         <h1>Produtos</h1>
-
-
-
-        <div class="prod"> </div>
-
-        <div class="prod"> </div>
-
-        <div class="prod"> </div>
-
-        <a href="#">produtos</a><a href="#">produtos</a><a href="#">produtos</a>
-
-        <div class="prod"> </div>
-        <div class="prod"> </div>
-        <div class="prod"> </div>
-
-        <a href="#">produtos</a><a href="#">produtos</a><a href="#">produtos</a>
-
-        <div class="prod"> </div>
-        <div class="prod"> </div>
-        <div class="prod"> </div>
-
-        <a href="#">produtos</a><a href="#">produtos</a><a href="#">produtos</a>
-
+        <div id="produtos-container">
+            <!-- Produtos serão inseridos aqui -->
+        </div>
     </main>
 
     <div class="clear"></div>
@@ -228,6 +273,146 @@
         <div class="img2"></div>
     </footer>
 
-</body>
+    <script>
+        // Exemplo de produtos
+        const produtos = [
+            {
+                nome: "aproduto 1",
+                preco: 299.90,
+                imagem: "",
+                destaque: true,
+                mais_vendido: true,
+                promocao: false,
+                data: "2024-05-10",
+                pacote: "populares"
+            },
+            {
+                nome: "bproduto 2",
+                preco: 89.90,
+                imagem: "img/tripe1.png",
+                destaque: false,
+                mais_vendido: true,
+                promocao: true,
+                data: "2024-04-15",
+                pacote: "menor_valor"
+            },
+            {
+                nome: "cproduto 3",
+                preco: 119.90,
+                imagem: "img/led1.png",
+                destaque: true,
+                mais_vendido: false,
+                promocao: false,
+                data: "2024-06-01",
+                pacote: "populares"
+            },
+            {
+                nome: "dproduto 4",
+                preco: 159.90,
+                imagem: "img/microfone1.png",
+                destaque: false,
+                mais_vendido: false,
+                promocao: true,
+                data: "2024-03-20",
+                pacote: "menor_valor"
+            },
+            {
+                nome: "eproduto 5",
+                preco: 499.90,
+                imagem: "img/pacote1.png",
+                destaque: true,
+                mais_vendido: true,
+                promocao: false,
+                data: "2024-07-01",
+                pacote: "populares"
+            },
+            {
+                nome: "fproduto 6",
+                preco: 199.90,
+                imagem: "img/pacote2.png",
+                destaque: false,
+                mais_vendido: false,
+                promocao: true,
+                data: "2024-02-10",
+                pacote: "menor_valor"
+            }
+        ];
 
+        function renderProdutos(lista) {
+            const container = document.getElementById('produtos-container');
+            container.innerHTML = '';
+            if (lista.length === 0) {
+                container.innerHTML = '<div style="width:100%;text-align:center;color:#888;padding:40px 0;">Nenhum produto encontrado.</div>';
+                return;
+            }
+            lista.forEach(prod => {
+                container.innerHTML += `
+                <div class="prod">
+                    <img src="${prod.imagem}" class="prod-img" alt="${prod.nome}">
+                    <div class="prod-nome">${prod.nome}</div>
+                    <div class="prod-preco">R$ ${prod.preco.toFixed(2).replace('.', ',')}</div>
+                    ${prod.promocao ? '<div class="prod-promo">Promoção</div>' : ''}
+                </div>
+                `;
+            });
+            // Corrige o clearfix para float:left
+            container.innerHTML += '<div style="clear:both"></div>';
+        }
+
+        function filtrar(tipo, btn) {
+            let lista = [...produtos];
+            switch (tipo) {
+                case 'mais_vendidos':
+                    lista = lista.filter(p => p.mais_vendido);
+                    break;
+                case 'destaque':
+                    lista = lista.filter(p => p.destaque);
+                    break;
+                case 'alfabetica':
+                    // Ordem alfabética normal: da esquerda para a direita (A-Z)
+                    lista.sort((a, b) => a.nome.localeCompare(b.nome));
+                    break;
+                case 'lancamento':
+                    lista.sort((a, b) => new Date(b.data) - new Date(a.data));
+                    break;
+                case 'preco_crescente':
+                    lista.sort((a, b) => a.preco - b.preco);
+                    break;
+                case 'preco_decrescente':
+                    lista.sort((a, b) => b.preco - a.preco);
+                    break;
+                case 'promocao':
+                    lista = lista.filter(p => p.promocao);
+                    break;
+                case 'abaixo_100':
+                    lista = lista.filter(p => p.preco < 100);
+                    break;
+                case 'acima_100':
+                    lista = lista.filter(p => p.preco >= 100);
+                    break;
+                case 'populares':
+                    lista = lista.filter(p => p.pacote === 'populares');
+                    break;
+                case 'menor_valor':
+                    lista = lista.filter(p => p.pacote === 'menor_valor');
+                    break;
+                default:
+                    break;
+            }
+            renderProdutos(lista);
+            // Destaca o filtro ativo
+            document.querySelectorAll('.filtro-btn').forEach(el => el.classList.remove('filtro-ativo'));
+            if(btn) btn.classList.add('filtro-ativo');
+        }
+
+        function limparFiltros(btn) {
+            renderProdutos(produtos);
+            document.querySelectorAll('.filtro-btn').forEach(el => el.classList.remove('filtro-ativo'));
+            btn.blur();
+        }
+
+        // Inicializa com todos os produtos
+        renderProdutos(produtos);
+    </script>
+</body>
 </html>

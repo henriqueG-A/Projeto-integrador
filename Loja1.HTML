@@ -4,79 +4,363 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja</title>
-    <link rel="shortcut icon" href="img/claquete.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/Ajuda.css">
+    <title>ReelBox Store</title>
+    <link rel="shortcut icon" href="img/image-_4_.ico" type="image/png">
 
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        @media (max-width: 900px) {
-            header {
-                flex-direction: column;
-                padding: 10px 10px;
-            }
-
-            main {
-                padding: 30px 5px;
-            }
-
-            footer {
-                font-size: 12px;
-                padding: 20px 5px;
-            }
+        :root {
+            --primary: #0076BE;
+            --secondary: #ffffff;
         }
 
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                padding: 10px 10px;
-            }
+        body {
+            background: #f6f6f6;
+        }
 
-            main {
-                padding: 30px 5px;
-            }
+        .navbar-brand .text1 {
+            color: var(--primary);
+            font-weight: bold;
+        }
 
-            footer {
-                font-size: 12px;
-                padding: 20px 5px;
+        .navbar-brand .text2 {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .filtros-box {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+        }
+
+        .filtros-box h5 {
+            color: var(--primary);
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
+        .filtros-box label {
+            font-weight: 500;
+        }
+
+        .prod-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .prod-card img {
+            max-height: 200px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            width: 100%;
+            border-radius: 8px;
+        }
+        .prod-card .card-title {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        .prod-card .card-text {
+            min-height: 56px;
+        }
+        .prod-card .price {
+            font-size: 1.1rem;
+            color: #232323;
+            font-weight: 600;
+        }
+        .prod-card .badge {
+            font-size: 0.9em;
+            background: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #fff;
+            padding: 30px 0;
+        }
+        footer .contact-info p {
+            margin: 0 0 8px 0;
+            font-size: 1.1em;
+        }
+        footer img {
+            width: 120px;
+        }
+
+        @media (max-width: 991px) {
+            .prod-card img {
+                max-height: 160px;
+            }
+        }
+        @media (max-width: 767px) {
+            .prod-card img {
+                max-height: 110px;
+            }
+            .filtros-box {
+                margin-bottom: 30px;
+            }
+        }
+        @media (max-width: 575px) {
+            .prod-card img {
+                max-height: 90px;
             }
         }
     </style>
 </head>
+
 <body>
-    <header>
-    <center><h1> loja</h1></center>
-    </header>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="curiosidade.HTML" id="logo">
+                <span class="text1">Reel</span>
+                <span class="text2">Box</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-primary" href="#">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <main>
-        <center>
-        <br><br><br><br>
-            <table align="right" id="loja" border="2" align="center" cellpadding="50" cellspacing="10">
-                <tr>
-                    <td>produtos</td>
-                    <td>produtos</td>
-                    <td>produtos</td>
-                    <td>produtos</td>
-                    <td>produtos</td>
-                   
-                </tr>
-                <tr>
-                    <td>produtos</td>
-                    <td>produtos</td>
-                    <td>produtos</td>
-                    <td>produtos</td>
-                    <td>produtos</td>
-                    
-                </tr>
-        </table>
-        </center>
+    <!-- MAIN SECTION -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- FILTROS (Sidebar) -->
+            <aside class="col-lg-3 mb-4">
+                <div class="filtros-box">
+                    <h5>Filtros</h5>
+                    <form id="filtrosForm">
+                        <!-- Categoria -->
+                        <div class="mb-3">
+                            <label class="form-label">Categorias</label>
+                            <select class="form-select" id="filtroCategoria" name="categoria">
+                                <option value="">Todas</option>
+                                <option value="destaque">Em destaque</option>
+                                <option value="mais_vendidos">Mais vendidos</option>
+                                <option value="alfabetica">Ordem alfabética</option>
+                                <option value="lancamento">Data de lançamento</option>
+                            </select>
+                        </div>
+                        <!-- Preço -->
+                        <div class="mb-3">
+                            <label class="form-label">Preço</label>
+                            <select class="form-select" id="filtroPreco" name="preco">
+                                <option value="">Todos</option>
+                                <option value="asc">Menor preço</option>
+                                <option value="desc">Maior preço</option>
+                                <option value="promo">Promoções</option>
+                                <option value="menor100">Abaixo de R$100</option>
+                                <option value="maior100">Acima de R$100</option>
+                            </select>
+                        </div>
+                        <!-- Pacote -->
+                        <div class="mb-3">
+                            <label class="form-label">Pacotes</label>
+                            <select class="form-select" id="filtroPacote" name="pacote">
+                                <option value="">Todos</option>
+                                <option value="popular">Mais populares</option>
+                                <option value="menor">Menor valor</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Aplicar Filtros</button>
+                        <button type="button" id="limparFiltros" class="btn btn-link w-100 mt-2">Limpar filtros</button>
+                    </form>
+                </div>
+            </aside>
 
-        
-            </main>
-            <br><br><br><br>
+            <!-- PRODUTOS -->
+            <section class="col-lg-9">
+                <h1 class="mb-4 text-primary">Produtos</h1>
+                <div class="row" id="produtosContainer">
+                    <!-- Cards dos produtos serão inseridos aqui dinamicamente -->
+                </div>
+            </section>
+        </div>
+    </main>
 
-        
-        
-        </body>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="contact-info">
+                <h5>CONTATO</h5>
+                <p><i class="fa-solid fa-envelope"></i> Gmail: reelbox_conporation@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> Telefone: 4002-8922</p>
+            </div>
+            <img src="img/image (5).png" alt="Logo ReelBox">
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- PRODUTOS E FILTROS (JS) -->
+    <script>
+        // Array de produtos fictícios (adicione mais conforme necessário)
+        const produtos = [
+            {
+                id: 1,
+                nome: "Câmera ReelBox 4K",
+                descricao: "Capture seus melhores momentos com qualidade ultra HD.",
+                preco: 299.99,
+                imagem: "img/produto1.jpg",
+                destaque: true,
+                mais_vendidos: true,
+                data_lancamento: "2024-06-01",
+                promocao: true,
+                pacote: "popular"
+            },
+            {
+                id: 2,
+                nome: "Microfone Pro",
+                descricao: "Áudio nítido para gravações profissionais.",
+                preco: 89.99,
+                imagem: "img/produto2.jpg",
+                destaque: true,
+                mais_vendidos: false,
+                data_lancamento: "2024-05-10",
+                promocao: false,
+                pacote: "menor"
+            },
+            {
+                id: 3,
+                nome: "Iluminação LED Studio",
+                descricao: "Deixe suas gravações mais vibrantes e profissionais.",
+                preco: 119.99,
+                imagem: "img/produto3.jpg",
+                destaque: false,
+                mais_vendidos: true,
+                data_lancamento: "2024-04-22",
+                promocao: true,
+                pacote: "popular"
+            },
+            {
+                id: 4,
+                nome: "Tripé Flexível",
+                descricao: "Estabilidade e praticidade em qualquer gravação.",
+                preco: 49.90,
+                imagem: "img/produto4.jpg",
+                destaque: false,
+                mais_vendidos: false,
+                data_lancamento: "2023-12-15",
+                promocao: false,
+                pacote: "menor"
+            },
+            {
+                id: 5,
+                nome: "Kit Completo ReelBox",
+                descricao: "O pacote definitivo para criadores de conteúdo.",
+                preco: 499.99,
+                imagem: "img/produto5.jpg",
+                destaque: true,
+                mais_vendidos: true,
+                data_lancamento: "2024-07-10",
+                promocao: true,
+                pacote: "popular"
+            },
+            {
+                id: 6,
+                nome: "Softbox Portátil",
+                descricao: "Ilumine seu cenário com facilidade e mobilidade.",
+                preco: 79.99,
+                imagem: "img/produto6.jpg",
+                destaque: false,
+                mais_vendidos: false,
+                data_lancamento: "2024-01-05",
+                promocao: false,
+                pacote: "menor"
+            }
+        ];
+
+        // Função para renderizar os produtos no container
+        function renderProdutos(produtosParaMostrar) {
+            const container = document.getElementById('produtosContainer');
+            container.innerHTML = '';
+            if (produtosParaMostrar.length === 0) {
+                container.innerHTML = `<div class="col-12"><p class="text-center text-secondary">Nenhum produto encontrado com esses filtros.</p></div>`;
+                return;
+            }
+            produtosParaMostrar.forEach(prod => {
+                container.innerHTML += `
+                    <div class="col-12 col-sm-6 col-md-4 d-flex">
+                        <div class="prod-card w-100">
+                            <img src="${prod.imagem}" alt="${prod.nome}" onerror="this.src='https://via.placeholder.com/300x200?text=Imagem+Indispon%C3%ADvel'">
+                            <div class="card-body w-100 p-0">
+                                <h5 class="card-title">${prod.nome}</h5>
+                                <p class="card-text">${prod.descricao}</p>
+                                <p class="price">R$ ${prod.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}</p>
+                                ${prod.promocao ? '<span class="badge">Promoção</span>' : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Função de filtro dos produtos
+        function filtrarProdutos() {
+            const categoria = document.getElementById('filtroCategoria').value;
+            const preco = document.getElementById('filtroPreco').value;
+            const pacote = document.getElementById('filtroPacote').value;
+
+            let filtrados = [...produtos];
+
+            // Categoria
+            if (categoria === "destaque") filtrados = filtrados.filter(p => p.destaque);
+            else if (categoria === "mais_vendidos") filtrados = filtrados.filter(p => p.mais_vendidos);
+            else if (categoria === "alfabetica") filtrados = filtrados.sort((a, b) => a.nome.localeCompare(b.nome));
+            else if (categoria === "lancamento") filtrados = filtrados.sort((a, b) => new Date(b.data_lancamento) - new Date(a.data_lancamento));
+
+            // Preço
+            if (preco === "asc") filtrados = filtrados.sort((a, b) => a.preco - b.preco);
+            else if (preco === "desc") filtrados = filtrados.sort((a, b) => b.preco - a.preco);
+            else if (preco === "promo") filtrados = filtrados.filter(p => p.promocao);
+            else if (preco === "menor100") filtrados = filtrados.filter(p => p.preco < 100);
+            else if (preco === "maior100") filtrados = filtrados.filter(p => p.preco >= 100);
+
+            // Pacote
+            if (pacote === 'popular') filtrados = filtrados.filter(p => p.pacote === 'popular');
+            else if (pacote === 'menor') filtrados = filtrados.filter(p => p.pacote === 'menor');
+
+            renderProdutos(filtrados);
+        }
+
+        // Eventos do formulário de filtros
+        document.getElementById('filtrosForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            filtrarProdutos();
+        });
+
+        document.getElementById('limparFiltros').addEventListener('click', function () {
+            document.getElementById('filtroCategoria').value = "";
+            document.getElementById('filtroPreco').value = "";
+            document.getElementById('filtroPacote').value = "";
+            renderProdutos(produtos);
+        });
+
+        // Inicialização
+        renderProdutos(produtos);
+    </script>
+</body>
 
 </html>
