@@ -8,12 +8,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Shrikhand&display=swap');
 
 body {
-    font-family: montserrat;
+    font-family: Montserrat:ital;
     display: flex;
     flex-direction: column;
     background-color: #1F1F1F;
    color: white;
 }
+
+
+
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.text-section {
+    flex: 1;
+    padding-right: 80px;
+    text-align: left;
+    max-width: 500px;
+}
+
+.text-section h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+.text-section p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.blue-text {
+    color: #ffffff;
+    background-color: #0076BE;
+    padding: 5px 15px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+
+
+.product-category {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.product-category:hover {
+    transform: scale(1.05);
+}
+
+
+
+#bannerpr {
+   margin-left: 700px;
+ 
+}
+
+
+
+
+/* Responsividade */
+
+
+
+
+
 
 
 
@@ -134,17 +206,38 @@ a {
   text-decoration: none; /* Remove o sublinhado */
 }
 
+.s1-container {
+    display: flex;
+    flex-direction: 2 column ;
+}
+
+s2{
+   
+  
+}
+
+s1_l{
+  
+
+}
+
+s1_r{
+    display: flex;
+flex-direction: row;
+}
+
+
+
 main .s1_l{
     color: #0076BE;
-    float: left;
-    width: 40%;
+    
+ 
     text-transform: uppercase;
     font-family:  Arial Narrow Bold, sans-serif;
     font-size: 20px;
-    text-align: center;
-    margin-left: 50px;
-   margin-top: 350px;
-   margin-bottom: 350px;
+   
+   
+ 
     cursor: pointer;
 }
 
@@ -154,13 +247,7 @@ main .s1_l{
   cursor: pointer;
 }
 
-main .s1_r{
-    float: right;
-  margin-right: 60px;
-    background-image: url(img/BANNER\ CAIXAS.png);
-    
 
-}
 
 main .s1_c {
     margin: 250px 570px 0 570px; /* topo, auto, baixo, auto */
