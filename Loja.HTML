@@ -69,7 +69,7 @@
             padding: 10px 14px;
             border-radius: 8px;
             border: none;
-            background: #f3f8fc;
+            background: rgba(0,118,190,0.04);
             color: #0076BE;
             font-size: 1rem;
             font-weight: 500;
@@ -91,7 +91,7 @@
 
         /* Limpar filtros botão */
         .limpar-btn {
-            background: #eee !important;
+            background: rgba(0,118,190,0.04) !important;
             color: #0076BE !important;
             font-weight: bold;
             margin-bottom: 10px;
@@ -134,7 +134,8 @@
 
         h1 {
             color: #0076BE;
-            margin: 120px 400px 0px 880px;
+            text-align: center;
+            margin: 100px 0 20px 0;
             font-size: 50px;
         }
 
@@ -150,14 +151,19 @@
             clear: both;
         }
 
-      
+        #produtos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; 
+            gap: 40px; 
+            margin: 40px auto;
+            max-width: 1200px;
+        }
 
         .prod {
-            margin: 50px 20px 40px 20px;
-            width: 20%;
-            height: 400px;
+            width: 220px;
+            height: 380px;
             background-color: #093074;
-            float: left;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -165,7 +171,12 @@
             box-sizing: border-box;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            position: relative;
+            padding: 10px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .prod:hover {
+            transform: translateY(-5px);
         }
 
         .prod-img {
@@ -274,12 +285,12 @@
     </footer>
 
     <script>
-        // Exemplo de produtos
+        
         const produtos = [
             {
                 nome: "aproduto 1",
                 preco: 299.90,
-                imagem: "",
+                imagem: "img/3d44122e837e6184afdb7e7c3e1da3df.webp",
                 destaque: true,
                 mais_vendido: true,
                 promocao: false,
@@ -289,7 +300,7 @@
             {
                 nome: "bproduto 2",
                 preco: 89.90,
-                imagem: "img/tripe1.png",
+                imagem: "img/3d44122e837e6184afdb7e7c3e1da3df.webp",
                 destaque: false,
                 mais_vendido: true,
                 promocao: true,
@@ -299,7 +310,7 @@
             {
                 nome: "cproduto 3",
                 preco: 119.90,
-                imagem: "img/led1.png",
+                imagem: "img/3d44122e837e6184afdb7e7c3e1da3df.webp",
                 destaque: true,
                 mais_vendido: false,
                 promocao: false,
@@ -309,7 +320,7 @@
             {
                 nome: "dproduto 4",
                 preco: 159.90,
-                imagem: "img/microfone1.png",
+                imagem: "img/3d44122e837e6184afdb7e7c3e1da3df.webp",
                 destaque: false,
                 mais_vendido: false,
                 promocao: true,
@@ -319,7 +330,7 @@
             {
                 nome: "eproduto 5",
                 preco: 499.90,
-                imagem: "img/pacote1.png",
+                imagem: "img/3d44122e837e6184afdb7e7c3e1da3df.webp",
                 destaque: true,
                 mais_vendido: true,
                 promocao: false,
@@ -329,7 +340,7 @@
             {
                 nome: "fproduto 6",
                 preco: 199.90,
-                imagem: "img/pacote2.png",
+                imagem: "img/3d44122e837e6184afdb7e7c3e1da3df.webp",
                 destaque: false,
                 mais_vendido: false,
                 promocao: true,
@@ -355,8 +366,6 @@
                 </div>
                 `;
             });
-            // Corrige o clearfix para float:left
-            container.innerHTML += '<div style="clear:both"></div>';
         }
 
         function filtrar(tipo, btn) {
@@ -369,7 +378,6 @@
                     lista = lista.filter(p => p.destaque);
                     break;
                 case 'alfabetica':
-                    // Ordem alfabética normal: da esquerda para a direita (A-Z)
                     lista.sort((a, b) => a.nome.localeCompare(b.nome));
                     break;
                 case 'lancamento':
@@ -400,7 +408,6 @@
                     break;
             }
             renderProdutos(lista);
-            // Destaca o filtro ativo
             document.querySelectorAll('.filtro-btn').forEach(el => el.classList.remove('filtro-ativo'));
             if(btn) btn.classList.add('filtro-ativo');
         }
@@ -411,7 +418,6 @@
             btn.blur();
         }
 
-        // Inicializa com todos os produtos
         renderProdutos(produtos);
     </script>
 </body>
