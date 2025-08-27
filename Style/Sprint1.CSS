@@ -5,8 +5,10 @@
     
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Shrikhand&display=swap');
+
 body {
-    font-family: sans-serif;
+    font-family: montserrat;
     display: flex;
     flex-direction: column;
     background-color: #1F1F1F;
@@ -154,10 +156,10 @@ main .s1_l{
 
 main .s1_r{
     float: right;
-    width: 50%;
-    background-color: white;
-    margin-right: 50px;
-height: 700px;
+  margin-right: 60px;
+    background-image: url(img/BANNER\ CAIXAS.png);
+    
+
 }
 
 main .s1_c {
