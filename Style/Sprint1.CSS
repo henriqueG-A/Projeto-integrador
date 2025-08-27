@@ -20,10 +20,11 @@ body {
     width: 100%;
     display: flex;
     position: fixed;
+    z-index: 1000;
     justify-content: space-between;
     align-items: center;
  opacity: 80%;
- bacground-opacity: 0.8;
+ background-origin: 0.8;
     padding: 10px 20px;
 
 }
