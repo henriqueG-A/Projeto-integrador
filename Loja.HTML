@@ -12,7 +12,11 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        
+
     <link rel="stylesheet" href="Style/Sprint1.CSS">
+
+    
 
     <style>
         .filtros {
@@ -24,7 +28,7 @@
             border-radius: 16px;
             box-shadow: 0 2px 12px rgba(0, 118, 190, 0.08);
             padding: 32px 24px 24px 24px;
-            margin: 100px 0 40px 40px;
+            margin: 120px 0 40px 40px;
             display: flex;
             flex-direction: column;
             gap: 28px;
@@ -120,22 +124,82 @@
             }
         }
 
+        /* Botão toggle para filtros */
+        .filtro-toggle-btn {
+            display: none;
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            z-index: 1000;
+            background: #0076BE;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,118,190,0.3);
+            transition: background 0.2s;
+        }
+
+        .filtro-toggle-btn:hover {
+            background: #005a9e;
+        }
+
+        .filtro-toggle-btn i {
+            margin-right: 8px;
+        }
+
+        @media (max-width: 900px) {
+            .filtro-toggle-btn {
+                display: block;
+            }
+            
+            .filtros {
+                position: fixed;
+                top: 150px;
+                left: 20px;
+                z-index: 999;
+                max-height: 70vh;
+                overflow-y: auto;
+                display: none;
+                flex-direction: column;
+                gap: 14px;
+                padding: 20px;
+                margin: 0;
+                width: calc(100% - 40px);
+                max-width: 400px;
+            }
+            
+            .filtros.filtros-abertos {
+                display: flex;
+            }
+            
+            .filtros-section {
+                min-width: unset;
+                flex: none;
+            }
+        }
+
         @media (max-width: 600px) {
             .filtros {
                 flex-direction: column;
                 gap: 14px;
-                padding: 10px 2px;
-                margin-top: 100px;
+                padding: 15px;
+                margin-top: 0;
+                width: calc(100% - 30px);
+                left: 15px;
             }
-            .filtros-section {
-                min-width: unset;
+            
+            .filtro-toggle-btn {
+                left: 15px;
             }
         }
 
         h1 {
             color: #0076BE;
             text-align: center;
-            margin: 100px 0 20px 0;
+            margin: 120px 0 20px 0;
             font-size: 50px;
         }
 
@@ -227,7 +291,12 @@
     <div class="clear"></div>
 
     <main>
-        <div class="filtros">
+        <!-- Botão para mostrar/ocultar filtros em mobile -->
+        <button id="toggle-filtros-btn" class="filtro-toggle-btn">
+            <i class="fa fa-filter"></i> Mostrar Filtros
+        </button>
+
+        <div class="filtros" id="filtros-container">
             <div class="filtros-section">
                 <h5><i class="fa fa-filter"></i> Filtros</h5>
                 <button class="filtro-btn limpar-btn" onclick="limparFiltros(this)">
@@ -262,7 +331,6 @@
 
         <h1>Produtos</h1>
         <div id="produtos-container">
-            <!-- Produtos serão inseridos aqui -->
         </div>
     </main>
 
@@ -285,12 +353,13 @@
     </footer>
 
     <script>
-        
+      
+
         const produtos = [
             {
                 nome: "aproduto 1",
                 preco: 299.90,
-                imagem: "img/3d44122e837e6184afdb7e7c3e1da3df.webp",
+                imagem: "img/55d210c72ebef9911f794026d0f8254f.png",
                 destaque: true,
                 mais_vendido: true,
                 promocao: false,
@@ -300,7 +369,7 @@
             {
                 nome: "bproduto 2",
                 preco: 89.90,
-                imagem: "img/3d44122e837e6184afdb7e7c3e1da3df.webp",
+                imagem: "img/D_NQ_NP_636660-MLB86628052216_062025-O.webp",
                 destaque: false,
                 mais_vendido: true,
                 promocao: true,
@@ -310,7 +379,7 @@
             {
                 nome: "cproduto 3",
                 preco: 119.90,
-                imagem: "img/3d44122e837e6184afdb7e7c3e1da3df.webp",
+                imagem: "img/sg-11134201-7ra0m-m4kj4mre3ltt4c.JFIF",
                 destaque: true,
                 mais_vendido: false,
                 promocao: false,
@@ -330,7 +399,7 @@
             {
                 nome: "eproduto 5",
                 preco: 499.90,
-                imagem: "img/3d44122e837e6184afdb7e7c3e1da3df.webp",
+                imagem: "img/H3d596630cbe04d089f8488a8ca623a882.webp",
                 destaque: true,
                 mais_vendido: true,
                 promocao: false,
@@ -340,10 +409,30 @@
             {
                 nome: "fproduto 6",
                 preco: 199.90,
+                imagem: "img/5210e27bb2c7ba6fe2feb12f400ca5e7.JPG",
+                destaque: false,
+                mais_vendido: false,
+                promocao: true,
+                data: "2024-02-10",
+                pacote: "menor_valor"
+            },
+            {
+                nome: "gproduto 7",
+                preco: 199.90,
                 imagem: "img/3d44122e837e6184afdb7e7c3e1da3df.webp",
                 destaque: false,
                 mais_vendido: false,
                 promocao: true,
+                data: "2024-02-10",
+                pacote: "menor_valor"
+            },
+            {
+                nome: "hproduto 8",
+                preco: 199.90,
+                imagem: "img/04-camiseta-preta-alem-das-estrelas-100-algodao-manga-curta-egg.webp",
+                destaque: false,
+                mais_vendido: false,
+                promocao: false,
                 data: "2024-02-10",
                 pacote: "menor_valor"
             }
@@ -419,6 +508,47 @@
         }
 
         renderProdutos(produtos);
+
+        // Função para toggle dos filtros
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggle-filtros-btn');
+            const filtrosContainer = document.getElementById('filtros-container');
+            let filtrosAbertos = false;
+
+            toggleBtn.addEventListener('click', function() {
+                filtrosAbertos = !filtrosAbertos;
+                
+                if (filtrosAbertos) {
+                    filtrosContainer.classList.add('filtros-abertos');
+                    toggleBtn.innerHTML = '<i class="fa fa-times"></i> Ocultar Filtros';
+                } else {
+                    filtrosContainer.classList.remove('filtros-abertos');
+                    toggleBtn.innerHTML = '<i class="fa fa-filter"></i> Mostrar Filtros';
+                }
+            });
+
+            // Fechar filtros ao clicar fora
+            document.addEventListener('click', function(event) {
+                if (filtrosAbertos && 
+                    !filtrosContainer.contains(event.target) && 
+                    !toggleBtn.contains(event.target)) {
+                    filtrosAbertos = false;
+                    filtrosContainer.classList.remove('filtros-abertos');
+                    toggleBtn.innerHTML = '<i class="fa fa-filter"></i> Mostrar Filtros';
+                }
+            });
+
+            // Fechar filtros ao aplicar um filtro (em mobile)
+            document.querySelectorAll('.filtro-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (window.innerWidth <= 900) {
+                        filtrosAbertos = false;
+                        filtrosContainer.classList.remove('filtros-abertos');
+                        toggleBtn.innerHTML = '<i class="fa fa-filter"></i> Mostrar Filtros';
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
