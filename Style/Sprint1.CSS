@@ -53,9 +53,10 @@ font-size: 32px;
 }
 
 .navba {
-    padding-top: 10px;
     width: 100%;
-    margin-left: 20px;
+    display: flex;
+    justify-content: baseline; /* Alinha os links à direita */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .navba::after {
@@ -82,8 +83,7 @@ font-size: 32px;
 
 
 .nav2{
-width: 
-    100%;
+width: 100%;
     display: flex;
     justify-content: flex-end; /* Alinha os links à direita */
     align-items: center; /* Centraliza verticalmente */
@@ -146,7 +146,8 @@ main .s1_l{
 }
 
 .s1_l:hover {
-    font-size: 25px;
+    font-size: 21px;
+    transition: all 0.3s ease; /* Adiciona uma transição suave */
   cursor: pointer;
 }
 
