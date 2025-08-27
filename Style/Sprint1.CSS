@@ -286,6 +286,26 @@ footer h1 {
     font-size: 20px;
 }
 
+.official-products {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.logo-strip {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo-strip img {
+    height: 100px;
+    transition: transform 0.3s;
+}
+
+.logo-strip img:hover {
+    transform: scale(1.1);
+}
+
 
 
 
