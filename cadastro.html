@@ -5,61 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="img/image-_4_.ico">
-    <title>Reelbox - Pagamento</title>
+    <title>Reelbox - Cadastro</title>
 
     <link rel="stylesheet" href="Style/Sprint1.CSS">
 
     <style>
-        @media (max-width: 900px) {
-            .cards-container {
-                grid-template-columns: 1fr;
-                padding: 0 10px 40px;
-            }
-
-            .card img {
-                height: 200px;
-            }
-
-            .title {
-                font-size: 28px;
-            }
-
-            footer {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 20px;
-            }
-
-            footer div {
-                max-width: none;
-            }
-        }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                padding: 10px 10px;
-            }
-
-            .title {
-                font-size: 22px;
-            }
-
-            .card img {
-                height: 140px;
-            }
-
-            main {
-                padding: 30px 5px;
-            }
-
-            footer {
-                font-size: 12px;
-                padding: 20px 5px;
-            }
-        }
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -123,8 +73,8 @@
 
         input[type="text"],
         input[type="number"] {
-            width: 300px;
-            max-width: 500px;
+            width: 100%;
+            max-width: 300px;
             padding: 10px;
             margin-bottom: 20px;
             border: none;
@@ -188,17 +138,62 @@
             color: white;
         }
 
- .btn-finalizar {
-    background-color: #0077b6; /* Cor quando habilitado */
-    color: white;
-}
+        .btn-finalizar {
+            background-color: #0077b6;
+            color: white;
+        }
 
-.btn-finalizar:disabled {
-    background-color: #444;    /* Cor quando desabilitado */
-    color: #ccc;
-    cursor: not-allowed;
-    opacity: 0.7;
-}
+        .btn-finalizar:disabled {
+            background-color: #444;
+            color: #ccc;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        /* Media Queries para Responsividade */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            input[type="text"],
+            input[type="number"] {
+                width: 90%;
+            }
+            
+            .row {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .button-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+                padding: 20px 10px;
+            }
+            
+            footer div {
+                max-width: none;
+            }
+        }
     </style>
 </head>
 
@@ -212,54 +207,42 @@
 
     <main>
         <h1>CADASTRO</h1>
-               <form onsubmit="window.location.href='Index.HTML'; return false;">
+        <form onsubmit="window.location.href='Index.HTML'; return false;">
             <label for="cartao">CPF/CNPJ</label>
             <input type="text" id="CPF" name="cartao" maxlength="19" placeholder="•••• •••• •••• ••••">
 
             <div class="row">
-                <input type="text" id="datade"   name="validade" placeholder="Data de Nascimento">
-
-
+                <input type="text" id="datade" name="validade" placeholder="Data de Nascimento">
             </div>
 
             <input type="text" id="nome" name="nome" placeholder="NOME COMPLETO">
 
- <div class="form-check">
+            <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
                 Aceito os termos
             </div>
 
             <div class="button-row">
-                               <button type="submit" class="btn-finalizar" id="btnFinalizar" disabled>FINALIZAR</button>
+                <button type="submit" class="btn-finalizar" id="btnFinalizar" disabled>FINALIZAR</button>
                 <button type="button" class="btn-outros" onclick="window.location.href='Index.HTML'">VOLTAR</button>
             </div>
-
-
-            
         </form>
 
+        <script>
+            function verificarCampos() {
+                const cpf = document.getElementById('CPF').value.trim();
+                const data = document.getElementById('datade').value.trim();
+                const nome = document.getElementById('nome').value.trim();
+                const termos = document.getElementById('invalidCheck2').checked;
+                const btn = document.getElementById('btnFinalizar');
+                btn.disabled = !(cpf && data && nome && termos);
+            }
 
-<script>
-
-
-
-
-
-function verificarCampos() {
-    const cpf = document.getElementById('CPF').value.trim();
-    const data = document.getElementById('datade').value.trim();
-    const nome = document.getElementById('nome').value.trim();
-    const termos = document.getElementById('invalidCheck2').checked;
-    const btn = document.getElementById('btnFinalizar');
-    btn.disabled = !(cpf && data && nome && termos);
-}
-
-document.getElementById('CPF').addEventListener('input', verificarCampos);
-document.getElementById('datade').addEventListener('input', verificarCampos);
-document.getElementById('nome').addEventListener('input', verificarCampos);
-document.getElementById('invalidCheck2').addEventListener('change', verificarCampos);
-</script>
-
+            document.getElementById('CPF').addEventListener('input', verificarCampos);
+            document.getElementById('datade').addEventListener('input', verificarCampos);
+            document.getElementById('nome').addEventListener('input', verificarCampos);
+            document.getElementById('invalidCheck2').addEventListener('change', verificarCampos);
+        </script>
     </main>
 
     <footer>

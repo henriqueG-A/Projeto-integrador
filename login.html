@@ -8,59 +8,9 @@
     <link rel="stylesheet" href="Style/Sprint1.CSS">
 
     <style>
-        @media (max-width: 900px) {
-            .cards-container {
-                grid-template-columns: 1fr;
-                padding: 0 10px 40px;
-            }
-
-            .card img {
-                height: 200px;
-            }
-
-            .title {
-                font-size: 28px;
-            }
-
-            footer {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 20px;
-            }
-
-            footer div {
-                max-width: none;
-            }
-        }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                padding: 10px 10px;
-            }
-
-            .title {
-                font-size: 22px;
-            }
-
-            .card img {
-                height: 140px;
-            }
-
-            main {
-                padding: 30px 5px;
-            }
-
-            footer {
-                font-size: 12px;
-                padding: 20px 5px;
-            }
-        }
-
         body {
-            padding: 0%;
-            margin: 0%;
+            padding: 0;
+            margin: 0;
             font-family: Arial, sans-serif;
             background-color: #1e1e1e;
             color: #00a0e0;
@@ -116,7 +66,8 @@
 
         input[type="email"],
         input[type="password"] {
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
             padding: 10px;
             margin-bottom: 20px;
             border: none;
@@ -169,15 +120,34 @@
             color: white;
         }
 
-.btn-login:disabled {
-    background-color: #444 ;
-    color: #ccc t;
-    cursor: not-allowed;
-    opacity: 0.7;
-}
+        .btn-login:disabled {
+            background-color: #444;
+            color: #ccc;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
 
+        /* Media Queries para Responsividade */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
 
+            input[type="email"],
+            input[type="password"] {
+                width: 90%;
+            }
 
+            .button-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 
@@ -191,14 +161,13 @@
 
     <main>
         <h1>LOGIN</h1>
-             <form onsubmit="return validarLogin(event)">
+        <form onsubmit="return validarLogin(event)">
             <label for="email">E-MAIL</label>
             <input type="email" id="email" name="email" required placeholder="exemplo@hotmail.com">
         
             <label for="senha">SENHA</label>
             <input type="password" id="senha" name="senha" required placeholder="Senha Necessária">
         
-
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
                 Aceito os termos
@@ -210,15 +179,10 @@
             </div>
         </form>
 
-    
-
     </main>
 
-    
-
     <script>
-
-             function validarLogin(event) {
+        function validarLogin(event) {
             event.preventDefault(); // Impede o envio padrão do formulário
             const email = document.getElementById('email').value;
             const senha = document.getElementById('senha').value;
@@ -242,7 +206,6 @@
         document.getElementById('email').addEventListener('input', verificarCampos);
         document.getElementById('senha').addEventListener('input', verificarCampos);
         document.getElementById('invalidCheck2').addEventListener('change', verificarCampos);
-            
     </script>
     
     <footer>

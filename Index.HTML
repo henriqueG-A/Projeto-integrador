@@ -17,14 +17,44 @@
     
 
     <style>
+        /* Responsividade para header */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                padding: 10px;
+                text-align: center;
+            }
+            
+            .navba, .nav2 {
+                width: 100%;
+                justify-content: center;
+                margin: 10px 0;
+            }
+            
+            .navba a, .nav2 a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navba, .nav2 {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .navba a, .nav2 a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Responsividade para seção principal */
         @media (max-width: 900px) {
             .cards-container {
                 grid-template-columns: 1fr;
                 padding: 0 10px 40px;
             }
-
-
-
 
             .card img {
                 height: 200px;
@@ -35,7 +65,6 @@
             }
 
             footer {
-                
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
@@ -45,6 +74,33 @@
             footer div {
                 max-width: none;
             }
+            
+            /* Ajustes para seção de produtos */
+            section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            
+            .s1_l {
+                float: none;
+                width: 100%;
+                margin: 20px 0;
+                text-align: center;
+            }
+            
+            .s1_r {
+                float: none;
+                width: 100%;
+                text-align: center;
+                margin: 20px 0;
+            }
+            
+            .s1_r img {
+                max-width: 100%;
+                height: auto;
+            }
         }
 
         @media (max-width: 600px) {
@@ -52,9 +108,6 @@
                 flex-direction: column;
                 padding: 10px 10px;
             }
-
-            
-
 
             .title {
                 font-size: 22px;
@@ -72,6 +125,39 @@
                 font-size: 12px;
                 padding: 20px 5px;
             }
+            
+            /* Ajustes para seção recomendados */
+            .s1_c {
+                margin: 100px auto 20px auto;
+                width: 90%;
+                font-size: 32px;
+            }
+            
+            .reco1, .reco2, .reco3 {
+                float: none;
+                width: 90%;
+                margin: 20px auto;
+                height: 300px;
+            }
+            
+            .s1_ctxt {
+                float: none;
+                width: 90%;
+                margin: 10px auto;
+                text-align: center;
+            }
+            
+            /* Ajustes para produtos oficiais */
+            .logo-strip {
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: center;
+            }
+            
+            .logo-strip img {
+                height: 60px;
+                margin: 5px;
+            }
         }
 
         .h1 {
@@ -79,6 +165,20 @@
             margin-top: 300px;
             text-align: center;
             font-size: 2.5em;
+        }
+        
+        /* Responsividade para imagens */
+        @media (max-width: 768px) {
+            .img1 {
+                height: 400px;
+                background-size: contain;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .img1 {
+                height: 300px;
+            }
         }
     </style>
 </head>
