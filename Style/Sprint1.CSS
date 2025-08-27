@@ -284,6 +284,197 @@ footer h1 {
     transform: scale(1.1);
 }
 
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+    .img1 {
+        background-size: 1200px 600px;
+        height: 600px;
+    }
+    
+    main .s1_c {
+        margin: 200px auto 0 auto;
+        width: 250px;
+        font-size: 40px;
+    }
+    
+    main .s1_ctxt {
+        width: 30%;
+        margin-left: 50px;
+    }
+    
+    main .reco1, .reco2, .reco3 {
+        width: 30%;
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 900px) {
+    .header {
+        padding: 10px 15px;
+    }
+    
+    .text1, .text2 {
+        font-size: 28px;
+    }
+    
+    .navba a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .nav2 a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+    
+    .img1 {
+        background-size: 900px 500px;
+        height: 500px;
+    }
+    
+    main .s1_l {
+        width: 100%;
+        margin: 250px 0 250px 0;
+        text-align: center;
+        float: none;
+    }
+    
+    main .s1_r {
+        float: none;
+        margin: 0 auto;
+        width: 80%;
+        height: 300px;
+    }
+    
+    main .s1_c {
+        font-size: 32px;
+        width: 200px;
+    }
+    
+    main .s1_ctxt {
+        width: 80%;
+        margin: 20px auto;
+        float: none;
+        text-align: center;
+    }
+    
+    main .reco1, .reco2, .reco3 {
+        width: 80%;
+        margin: 20px auto;
+        float: none;
+        height: 400px;
+    }
+    
+    .bblog {
+        width: 50%;
+    }
+    
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    footer div {
+        max-width: none;
+    }
+    
+    .logo-strip {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .logo-strip img {
+        height: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .text1, .text2 {
+        font-size: 24px;
+    }
+    
+    .navba {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navba a {
+        font-size: 12px;
+        padding: 6px 10px;
+        float: none;
+    }
+    
+    .nav2 {
+        justify-content: center;
+    }
+    
+    .nav2 a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    
+    .img1 {
+        background-size: 600px 350px;
+        height: 350px;
+    }
+    
+    main .s1_l {
+        font-size: 16px;
+        margin: 150px 0 150px 0;
+    }
+    
+    main .s1_c {
+        font-size: 24px;
+        width: 150px;
+    }
+    
+    main .s1_c:hover {
+        font-size: 26px;
+        width: 180px;
+    }
+    
+    main .s1_ctxt {
+        font-size: 16px;
+        width: 90%;
+    }
+    
+    main .reco1, .reco2, .reco3 {
+        width: 90%;
+        height: 300px;
+    }
+    
+    .bblog {
+        width: 70%;
+        font-size: 14px;
+    }
+    
+    footer {
+        padding: 20px 10px;
+        font-size: 12px;
+    }
+    
+    footer h1 {
+        font-size: 18px;
+    }
+    
+    .logo-strip img {
+        height: 60px;
+    }
+    
+    .img2 {
+        background-size: 80%;
+        padding: 30px 0;
+        height: 300px;
+    }
+}
+
 
 
 
