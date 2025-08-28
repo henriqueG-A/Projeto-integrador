@@ -490,7 +490,7 @@
             }
             lista.forEach(prod => {
                 container.innerHTML += `
-                <div class="prod">
+                <div class="prod" onclick="window.location.href='pagamento.html'" style="cursor: pointer;">
                     <img src="${prod.imagem}" class="prod-img" alt="${prod.nome}">
                     <div class="prod-nome">${prod.nome}</div>
                     <div class="prod-preco">R$ ${prod.preco.toFixed(2).replace('.', ',')}</div>
