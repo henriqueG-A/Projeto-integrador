@@ -100,6 +100,14 @@ body {
  opacity: 80%;
  background-origin: 0.8;
     padding: 10px 20px;
+     opacity: 100%;
+    animation-name: animation;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    position: relative;
+    display:flex;
+    text-align: center;
 
 }
 
@@ -107,11 +115,26 @@ body {
 .text1{
     color: #ffffff;
     font-size: 32px;
-
+ opacity: 100%;
+    animation-name: animation;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    position: relative;
+    display:flex;
+    text-align: center;
 }
 .text2{
     color: #0076BE;
 font-size: 32px;
+ opacity: 100%;
+    animation-name: animation;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    position: relative;
+    display:flex;
+    text-align: center;
 }
 #logo {
     font-size: 0px;
@@ -241,13 +264,30 @@ main .s1_l{
 
 
 
-main .s1_c {
-    margin-top: 300px;
-   text-align: center;
-    color: #0076BE;
-    width: 200px;
-    font-family: Montserrat:ital;
-    font-size: 30px;
+.s1_c {
+   
+    text-align: center;
+    margin: 180px auto 20px auto;
+    width: 100%;
+    display: block;
+}
+
+.s1_c a {
+    display: inline-block;
+    padding: 12px 32px;
+    background: #0076BE;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 32px;
+    text-decoration: none;
+    transition: background 0.3s;
+    margin: 0 auto;
+}
+
+ .s1_c:hover {
+    font-size: 35px;
+     padding: 15px 36px;
+   transition: 2s;
 }
 
 main .s1_ctxt {
@@ -260,11 +300,7 @@ main .s1_ctxt {
 }
 
 
- .s1_c:hover {
-    font-size: 32px;
-   color: #00609b;
-   transition: 2s;
-}
+
 main .reco1, .reco2, .reco3{
     margin-top: 100px;
     background-color: white;
@@ -322,7 +358,7 @@ main .reco1, .reco2, .reco3{
 
 footer {
     margin-top: 400px;
-    background-color: #0076BE;
+    background-color: #07275d91;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -552,8 +588,8 @@ footer h1 {
     }
 }
 
-
-
+footer__icons-item{
+    margin:0PX ;
 
 
 
