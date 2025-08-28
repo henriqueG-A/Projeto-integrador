@@ -56,6 +56,53 @@
             font-size: 36px;
         }
 
+        /* Estilos para o container dos cards */
+        .blog-cards-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #2c2c2c;
+            border: 1px solid #00aaff;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.3);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-text {
+            color: #ffffff;
+            font-size: 16px;
+            margin: 0;
+            text-align: center;
+        }
+
         /* Estilos customizados para o carrossel */
         .blog-carousel {
             margin: 40px auto;
@@ -188,6 +235,49 @@
                 font-size: 28px;
             }
         }
+
+        /* Responsividade para os cards do blog */
+        @media (max-width: 1200px) {
+            .blog-cards-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .blog-cards-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-cards-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 15px;
+            }
+            
+            .card-img-top {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .blog-cards-container {
+                margin: 30px auto;
+            }
+            
+            .card-img-top {
+                height: 150px;
+            }
+            
+            .card-body {
+                padding: 15px;
+            }
+            
+            .card-text {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 
@@ -267,34 +357,33 @@
 
 
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="blog-cards-container">
+  <div class="card">
+    <img src="img/759594.jfif" class="card-img-top" alt="Bastidores da produção da série de Harry Potter, da HBO">
+    <div class="card-body">
+      <p class="card-text">Bastidores da produção da série de Harry Potter, da HBO!</p>
+    </div>
   </div>
-</div>
 
-
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div class="card">
+    <img src="img/avatar-o-caminho-da-agua-2.webp" class="card-img-top" alt="Descubra como os efeitos visuais do filme AVATAR 2: O Caminho da Água foram feitos">
+    <div class="card-body">
+      <p class="card-text">Descubra como os efeitos visuais do filme AVATAR 2: O Caminho da Água foram feitos!</p>
+    </div>
   </div>
-</div>
 
-
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div class="card">
+    <img src="img/filters_quality(95)format(webp).webp" class="card-img-top" alt="Como a interação dos personagens em One Piece Live Action funcionarão com o Chopper">
+    <div class="card-body">
+      <p class="card-text">Como a interação dos personagens em One Piece Live Action funcionarão com o Chopper?</p>
+    </div>
   </div>
-</div>
 
-
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div class="card">
+    <img src="img/Avengers_Doomsday_logo.jpeg" class="card-img-top" alt="Entenda as polêmicas e possiveis brigas nos bastidores de Vingadores: Doomsday">
+    <div class="card-body">
+      <p class="card-text">Entenda as polêmicas e possiveis brigas nos bastidores de Vingadores: Doomsday!</p>
+    </div>
   </div>
 </div>
 
