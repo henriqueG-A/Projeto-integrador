@@ -211,15 +211,7 @@ a {
     flex-direction: 2 column ;
 }
 
-s2{
-   
-  
-}
 
-s1_l{
-  
-
-}
 
 s1_r{
     display: flex;
@@ -250,13 +242,12 @@ main .s1_l{
 
 
 main .s1_c {
-    margin: 250px 570px 0 570px; /* topo, auto, baixo, auto */
+    margin-top: 300px;
+   text-align: center;
     color: #0076BE;
-    width: 300px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 50px;
-     letter-spacing: 0.1em;
-    text-align: center;
+    width: 200px;
+    font-family: Montserrat:ital;
+    font-size: 30px;
 }
 
 main .s1_ctxt {
@@ -270,10 +261,9 @@ main .s1_ctxt {
 
 
  .s1_c:hover {
-    font-size: 55px;
-    background-color: #07265D;
-    width: 450px;
-    border-radius: 25px;
+    font-size: 32px;
+   color: #00609b;
+   transition: 2s;
 }
 main .reco1, .reco2, .reco3{
     margin-top: 100px;
