@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="img/image-_4_.ico">
     <title>Reelbox - Login</title>
     <link rel="stylesheet" href="Style/Sprint1.CSS">
@@ -126,25 +127,63 @@
 
         /* Media Queries para Responsividade */
         @media (max-width: 600px) {
-            h1 {
-                font-size: 28px;
-            }
-
-            input[type="email"],
-            input[type="password"] {
-                width: 90%;
-            }
-
-            .button-row {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            button {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-        }
+    header {
+        padding: 10px 5vw;
+        justify-content: center;
+    }
+    header .logo {
+        font-size: 18px;
+    }
+    main {
+        padding: 30px 2vw;
+    }
+    h1 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    form {
+        width: 100%;
+        max-width: 98vw;
+        padding: 10vw 2vw;
+        box-sizing: border-box;
+    }
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        max-width: 100%;
+        font-size: 15px;
+        padding: 10px;
+    }
+    .button-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    button {
+        width: 100%;
+        margin: 0 0 10px 0;
+        font-size: 15px;
+        padding: 10px 0;
+    }
+    .form-check {
+        font-size: 13px;
+    }
+    footer {
+        padding: 15px 2vw !important;
+        font-size: 13px;
+        text-align: center;
+    }
+    .footer__icons-item {
+        gap: 6px;
+        padding: 10px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .payment-icon {
+        width: 28px;
+        height: 18px;
+    }
+}
 
 
 form {
