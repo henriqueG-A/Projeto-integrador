@@ -101,13 +101,7 @@ body {
  background-origin: 0.8;
     padding: 10px 20px;
      opacity: 100%;
-    animation-name: animation;
-    animation-duration: 5s;
-    animation-iteration-count: 1;
-    animation-direction: alternate;
-    position: relative;
-    display:flex;
-    text-align: center;
+   
 
 }
 
@@ -591,5 +585,5 @@ footer h1 {
 footer__icons-item{
     margin:0PX ;
 
-
+}
 
