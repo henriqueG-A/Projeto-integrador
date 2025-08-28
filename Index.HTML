@@ -247,6 +247,234 @@
     margin: 0 auto;
 }
 
+        .recomendados-title {
+            display: block;
+            margin: 60px auto 40px auto;
+            padding: 12px 40px;
+            background: #0076BE;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            cursor: pointer;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .recomendados-title:hover {
+            background: #00b894;
+            color: #fff;
+            transform: translateY(-3px) scale(1.04);
+            text-decoration: none;
+        }
+
+        .recomendados-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 48px;
+            margin: 0 0 40px 0;
+        }
+
+        .recomendado {
+            background: #181818;
+            border-radius: 16px;
+            padding: 28px 24px 24px 24px;
+            text-align: center;
+            width: 370px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recomendado:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+        }
+
+        .recomendado-img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 22px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+        }
+
+.s1_ctxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centraliza horizontalmente */
+    flex: 1;
+    width: 100%;
+    background: rgba(0,0,0,0.10);
+    border-radius: 8px;
+    padding: 24px 0 18px 0;
+    color: #fff;
+    font-size: 1.15em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    margin-top: auto;
+    box-sizing: border-box;
+    text-align: center; /* Centraliza o texto */
+    min-height: 180px;  /* Garante altura mínima para ocupar a box */
+}
+
+        .recomendados-btn {
+    background: linear-gradient(90deg, #0076BE 60%, #00b894 100%);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 16px 48px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+}
+.recomendados-btn:hover {
+    background: linear-gradient(90deg, #00b894 60%, #0076BE 100%);
+    color: #fff;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+}
+
+/* CARDS */
+.recomendados-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 48px;
+    margin-bottom: 40px;
+}
+.recomendado {
+    background: #181818;
+    border-radius: 16px;
+    padding: 28px 24px 24px 24px;
+    text-align: center;
+    width: 370px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 600px;
+}
+.recomendado-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+.s1_ctxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    background: rgba(0,0,0,0.10);
+    border-radius: 8px;
+    padding: 24px 0 18px 0;
+    color: #fff;
+    font-size: 1.15em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    margin-top: auto;
+    box-sizing: border-box;
+    text-align: center;
+    min-height: 180px;
+    height: 100%;              /* NOVO: ocupa toda a altura disponível */
+    justify-self: stretch;     /* NOVO: força ocupar toda a largura do card */
+}
+
+.recomendado {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;      /* NOVO: faz o conteúdo ocupar toda a largura */
+    text-align: center;
+}
+}
+.titulo-filme {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+.subtitulo-filme {
+    font-size: 1em;
+    color: #bbb;
+    margin-bottom: 2px;
+}
+.data-filme {
+    font-size: 1.1em;
+    color: #00b894;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.local-filme {
+    font-size: 0.98em;
+    color: #bbb;
+    margin-top: 2px;
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+    .recomendado {
+        width: 320px;
+        min-height: 520px;
+    }
+    .recomendado-img {
+        height: 320px;
+    }
+}
+@media (max-width: 900px) {
+    .recomendados-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .recomendado {
+        width: 90%;
+        max-width: 400px;
+        min-height: 0;
+    }
+    .recomendado-img {
+        height: 220px;
+    }
+}
+@media (max-width: 600px) {
+    .recomendados-btn {
+        font-size: 1.1rem;
+        padding: 12px 20px;
+    }
+    .recomendado {
+        padding: 14px 6px 12px 6px;
+        width: 98%;
+        max-width: 350px;
+    }
+    .recomendado-img {
+        height: 140px;
+    }
+    .s1_ctxt {
+        font-size: 1em;
+        padding: 10px 4px 6px 4px;
+    }
+}
 
 
 
@@ -304,16 +532,41 @@
         
         </section>
 
-        <div class="clear"></div>
+       <!-- BOTÃO RECOMENDADOS -->
+<div style="display: flex; justify-content: center; margin: 60px 0 40px 0;">
+    <a class="recomendados-btn" href="recomendados.html">Recomendados</a>
+</div>
 
-
-        <h1 class="s1_c"> <a href="recomendados.html">Recomendados</a></h1>
-        <div class="reco1"></div> <div class="s1_ctxt"><span>Data de lançamento: 10 de julho de 2025 (Brasil)</span></div>
-        <div class="reco2"></div><div class="s1_ctxt"><span>Data de lançamento: 25 de julho de 2025 (EUA)</span></div>
-        <div class="reco3"></div> <div class="s1_ctxt"><span>Data de lançamento: 5 de dezembro de 2025 (EUA)</span></div>
-
-       
-        
+<!-- CARDS RECOMENDADOS -->
+<div class="recomendados-container">
+    <div class="recomendado">
+        <img src="img/superman.webp" alt="Superman" class="recomendado-img">
+        <div class="s1_ctxt">
+            <span class="titulo-filme">Superman</span>
+            <span class="subtitulo-filme">Data de lançamento:</span>
+            <span class="data-filme">10 de julho de 2025</span>
+            <span class="local-filme">(Brasil)</span>
+        </div>
+    </div>
+    <div class="recomendado">
+        <img src="img/quartetofantastico.webp" alt="Quarteto Fantástico" class="recomendado-img">
+        <div class="s1_ctxt">
+            <span class="titulo-filme">Quarteto Fantástico</span>
+            <span class="subtitulo-filme">Data de lançamento:</span>
+            <span class="data-filme">25 de julho de 2025</span>
+            <span class="local-filme">(EUA)</span>
+        </div>
+    </div>
+    <div class="recomendado">
+        <img src="img/Shrek.png" alt="Shrek 5" class="recomendado-img">
+        <div class="s1_ctxt">
+            <span class="titulo-filme">Shrek 5</span>
+            <span class="subtitulo-filme">Data de lançamento:</span>
+            <span class="data-filme">5 de dezembro de 2025</span>
+            <span class="local-filme">(EUA)</span>
+        </div>
+    </div>
+</div>
        
 
         <div class="clear"></div>
