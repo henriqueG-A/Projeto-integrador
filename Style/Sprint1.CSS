@@ -582,8 +582,18 @@ footer h1 {
     }
 }
 
-footer__icons-item{
-    margin:0PX ;
 
+
+   footer {
+    background: #102040;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 48px 8vw 32px 8vw;
+    font-size: 1.1em;
+    border-top: 2px solid #1a2a44;
+    box-shadow: 0 -1px 4px #0008;
+    gap: 40px;
 }
 
